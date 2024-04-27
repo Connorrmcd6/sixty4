@@ -1,6 +1,6 @@
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+        monospace;
     background-color: #b3e6ff;
 }
 
@@ -9,5 +9,9 @@ code {
 }
 
 .logo {
+    text-align: center;
+}
+
+.test {
     text-align: center;
 }
