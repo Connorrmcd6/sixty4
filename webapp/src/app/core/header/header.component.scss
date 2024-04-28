@@ -39,3 +39,9 @@
         max-height: 100%; // This will ensure the logo never has a greater height than the toolbar
     }
 }
+
+.button-container {
+    align-items: center;
+    justify-content: center;
+    position: inherit;
+}
