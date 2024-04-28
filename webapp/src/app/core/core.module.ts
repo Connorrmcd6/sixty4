@@ -4,6 +4,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+
 
 
 @NgModule({
@@ -12,7 +15,9 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   exports: [
     HeaderComponent,
