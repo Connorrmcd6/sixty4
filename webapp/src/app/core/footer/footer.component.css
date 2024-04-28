@@ -1,0 +1,19 @@
+/* footer.component.css */
+
+.footer {
+    /* Add any general styles for the footer here */
+}
+
+.responsive-text {
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+.bg-grey {
+    background-color: #919191; /* Adjust the shade of grey as needed */
+    padding: 20px 0; /* Adjust the padding as needed */
+}
+
+/* Additional styles for the copyright notice */
+.copyright {
+    font-size: 12px; /* You can adjust this as needed */
+}
