@@ -139,13 +139,18 @@ body {
 }
 
 @media (min-width: 600px) {
-    .body-content {
+    .safe-area {
         padding-top: 64px;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        max-width: 1280px;
+        margin: auto;
     }
 }
 
 @media (max-width: 599px) {
-    .body-content {
+    .safe-area {
         padding-top: 56px;
     }
 }
