@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LandingComponent } from './landing/landing.component';
+import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    LandingComponent,
+    HomeComponent,
     AboutComponent,
   ],
   imports: [
