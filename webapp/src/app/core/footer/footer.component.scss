@@ -1,19 +1,37 @@
-/* footer.component.css */
-
-.footer {
-    /* Add any general styles for the footer here */
+.footer-container {
+    background-color: #333333;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-.responsive-text {
-    font-size: clamp(14px, 2vw, 20px);
+.footer-content {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.bg-grey {
-    background-color: #919191; /* Adjust the shade of grey as needed */
-    padding: 20px 0; /* Adjust the padding as needed */
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-/* Additional styles for the copyright notice */
-.copyright {
-    font-size: 12px; /* You can adjust this as needed */
+.header-items-container {
+    display: flex;
+    align-items: center;
+}
+
+.socaials-container {
+    display: flex;
+    align-items: center;
+}
+
+.actions-container {
+    display: flex;
+    align-items: center;
 }
