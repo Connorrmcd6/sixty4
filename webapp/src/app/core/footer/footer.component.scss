@@ -33,19 +33,28 @@
 }
 
 .header-items-container {
+    padding-left: 5rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
+    text-align: left;
 }
 
 .socaials-container {
+    padding-left: 5rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
+    text-align: left;
 }
 
 .actions-container {
+    padding-left: 5rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
+    text-align: left;
 }
