@@ -1,1 +1,60 @@
-<p>contact works!</p>
+<div class="safe-area">
+    <div class="content-container">
+        <div class="left-container">
+            <div class="image-carousel">
+                <!-- Your image carousel content here -->
+            </div>
+        </div>
+        <div class="right-container">
+
+            <div class="contact-form">
+                <mat-card>
+                    <div class="card-welcome-container">
+                        <p>Lets Connect!</p>
+                    </div>
+                    <mat-card-content>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Name</mat-label>
+                            <input matInput placeholder="Name" type="text" #userName required>
+                            <mat-icon color="primary" matSuffix>person_outline</mat-icon>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Email" type="text" #userEmail required>
+                            <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Phone</mat-label>
+                            <input matInput placeholder="Phone" type="text" #userPhone required>
+                            <mat-icon color="primary" matSuffix>phone_outline</mat-icon>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>How can we help?</mat-label>
+                            <mat-select required>
+                                <mat-option value="design">Label Design</mat-option>
+                                <mat-option value="printing">Label Printing</mat-option>
+                                <mat-option value="packaging">Packaging</mat-option>
+                                <mat-option value="quote">Quoting</mat-option>
+                                <mat-option value="general">General Consult</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Message</mat-label>
+                            <textarea matInput></textarea>
+                        </mat-form-field>
+
+                        <div class="button-row">
+                            <button mat-raised-button color="primary">Send</button>
+                        </div>
+                    </mat-card-content>
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
