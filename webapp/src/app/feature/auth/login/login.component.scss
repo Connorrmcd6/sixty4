@@ -1,0 +1,74 @@
+.login-container{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #333333;
+
+}
+
+.login-card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 30px;
+}
+
+.logo-container img{
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+mat-card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+mat-card{
+    width: 300px;
+    padding: 10px 10px 20px 10px;
+    border-radius: 8px ;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.button-row{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-bottom: 4px;
+
+}
+.account-message{
+    margin-right: 5px;
+    font-size: 1em;
+}
+.forgot-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+.bottom-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}

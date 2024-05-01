@@ -1,1 +1,48 @@
-<p>login works!</p>
+<div class = "login-container">
+    <div class = "login-card-container">
+        <mat-card>
+            <nav>
+                <button mat-icon-button color="primary" (click)="goBack()">
+                  <mat-icon>
+                    arrow_back
+                  </mat-icon>  
+                </button>
+            </nav>
+            <div class="logo-container">
+                <img src="../../../../assets/logo-black.svg">
+            </div>
+        <mat-card-content>
+            <mat-form-field appearance="outline" required>
+                <mat-label> Email </mat-label>
+                <input matInput placeholder="Email" type="text" #userEmail>
+                <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" required>
+                <mat-label> Password </mat-label>
+                <input matInput placeholder="Password" type="password" #userPassword>
+                <mat-icon color="primary" matSuffix>visibility</mat-icon>
+            </mat-form-field>
+            <div class="button-row">
+                <button mat-raised-button>Login</button>
+            </div>
+        </mat-card-content>
+        <div class="bottom-content">
+            <span class="account-message">
+                Don't have an account?
+            </span>
+            <button mat-button color="primary">
+                Sign Up
+            </button>
+        </div>
+        <div class="forgot-password">
+            
+            <button mat-button color="primary">
+                Forgot Password?
+            </button>
+        </div>
+    </mat-card>
+    </div>
+</div>
+
+
