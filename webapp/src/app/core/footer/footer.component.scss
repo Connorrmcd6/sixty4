@@ -28,8 +28,8 @@
 
 .logo-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
 }
 
 .header-items-container {
@@ -41,7 +41,7 @@
     text-align: left;
 }
 
-.socaials-container {
+.socials-container {
     padding-left: 5rem;
     display: flex;
     align-items: flex-start;
