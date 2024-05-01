@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -11,6 +12,7 @@ import { RouterModule } from '@angular/router';
   declarations: [
     HomeComponent,
     AboutComponent,
+    ContactComponent,
   ],
   imports: [
     CommonModule,
