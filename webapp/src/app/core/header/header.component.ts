@@ -15,7 +15,7 @@ export class HeaderComponent {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.hideHeader = event.urlAfterRedirects === '/login' || event.urlAfterRedirects === '/register';
+        this.hideHeader = event.urlAfterRedirects === '/login' || event.urlAfterRedirects === '/register' || event.urlAfterRedirects === '/forgot-password';
       }
     });
   }
