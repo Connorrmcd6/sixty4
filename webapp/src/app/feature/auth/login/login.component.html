@@ -18,10 +18,12 @@
                 <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
             </mat-form-field>
 
-            <mat-form-field appearance="outline" required>
-                <mat-label> Password </mat-label>
-                <input matInput placeholder="Password" type="password" #userPassword>
-                <mat-icon color="primary" matSuffix>visibility</mat-icon>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" #userPassword required>
+                <button color="primary" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
             </mat-form-field>
             <div class="button-row">
                 <button mat-raised-button>Login</button>
