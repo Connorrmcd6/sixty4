@@ -8,6 +8,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit{
+  hide = true;
 constructor(
   private location: Location
 ){}
