@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -22,7 +23,8 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
     LoginComponent,
     SignupComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,

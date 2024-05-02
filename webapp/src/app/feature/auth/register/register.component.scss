@@ -1,13 +1,13 @@
-.page-container {
-    width:100%;
+.register-container {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #333333;
+    background: #333333;
   }
   
-  .page-card-content {
+  .register-card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,16 +32,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
-  
-  .button-row{
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    gap: 10px;
-    padding-bottom: 4px;
-
-}
   
   .logo-container {
     text-align: center;
@@ -53,6 +45,16 @@
     height: auto;
   }
   
+  .welcome {
+    color: #063684;
+    font-family: "Londrina-Solid", Roboto, Noto, sans-serif;
+  }
+  
+  .extension {
+    color: #f00aca;
+    font-family: "Londrina-Solid", Roboto, Noto, sans-serif;
+  }
+  
   .logo-welcome-container {
     display: flex;
     flex-direction: column;
@@ -60,16 +62,34 @@
     margin-bottom: 20px;
   }
   
-  .message {
-    font-size: 14px;
-    font-weight: regular;
-    margin-bottom: 20px;
-    color: rgb(0, 0, 0, 0.6);
-  }
-  
-  .resend {
+  .bottom-content {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+  }
+  
+  .login-message {
+    margin-right: 5px;
+    font-size: 1em;
+  }
+  
+  .button-row {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-bottom: 4px;
+  }
+  
+  .mat-mdc-card {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .back-button-row {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
   }
