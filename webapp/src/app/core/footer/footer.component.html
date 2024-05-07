@@ -26,13 +26,10 @@
             </div>
             <div class="socaials-container">
                 <div class="social-item">
-                    <button mat-button color="accent">LinkedIn</button>
+                    <button mat-button color="accent" (click)="openURL('https://www.linkedin.com/company/sixty4-print-solutions/')">LinkedIn</button>
                 </div>
                 <div class="social-item">
-                    <button mat-button color="accent">Facebook</button>
-                </div>
-                <div class="social-item">
-                    <button mat-button color="accent">Instagram</button>
+                    <button mat-button color="accent" (click)="openURL('https://www.instagram.com/sixty4print/')">Instagram</button>
                 </div>
             </div>
             <div class="actions-container">
@@ -42,7 +39,7 @@
                 </div>
 
                 <div class="action-item">
-                    <button mat-button color="accent">
+                    <button mat-button color="accent" (click)="openURL('https://maps.app.goo.gl/LawQfz8T1khaz5Hq9')">
                         <mat-icon color="accent" matSuffix>location_on</mat-icon>Location</button>
                 </div>
 
