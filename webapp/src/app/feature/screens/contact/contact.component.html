@@ -1,9 +1,7 @@
 <div class="safe-area">
     <div class="content-container">
         <div class="left-container">
-            <div class="image-carousel">
-                <!-- Your image carousel content here -->
-            </div>
+            <img class="filler" src="../../../../assets/logo-black.svg">
         </div>
         <div class="right-container">
 
@@ -14,25 +12,25 @@
                     </div>
                     <mat-card-content>
 
-                        <mat-form-field appearance="outline">
+                        <mat-form-field appearance="outline" class="contact-field">
                             <mat-label>Name</mat-label>
                             <input matInput placeholder="Name" type="text" #userName required>
                             <mat-icon color="primary" matSuffix>person_outline</mat-icon>
                         </mat-form-field>
 
-                        <mat-form-field appearance="outline">
+                        <mat-form-field appearance="outline" class="contact-field">
                             <mat-label>Email</mat-label>
                             <input matInput placeholder="Email" type="text" #userEmail required>
                             <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
                         </mat-form-field>
 
-                        <mat-form-field appearance="outline">
+                        <mat-form-field appearance="outline" class="contact-field">
                             <mat-label>Phone</mat-label>
                             <input matInput placeholder="Phone" type="text" #userPhone required>
                             <mat-icon color="primary" matSuffix>phone_outline</mat-icon>
                         </mat-form-field>
 
-                        <mat-form-field>
+                        <mat-form-field appearance="outline" class="contact-field">
                             <mat-label>How can we help?</mat-label>
                             <mat-select required>
                                 <mat-option value="design">Label Design</mat-option>
@@ -43,13 +41,13 @@
                             </mat-select>
                         </mat-form-field>
 
-                        <mat-form-field>
+                        <mat-form-field appearance="outline" class="contact-field">
                             <mat-label>Message</mat-label>
                             <textarea matInput></textarea>
                         </mat-form-field>
 
                         <div class="button-row">
-                            <button mat-raised-button color="primary">Send</button>
+                            <button class="send-button" mat-raised-button color="primary">Send</button>
                         </div>
                     </mat-card-content>
 

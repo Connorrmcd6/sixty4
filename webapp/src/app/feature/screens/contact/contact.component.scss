@@ -4,17 +4,14 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    flex-direction: row;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
 }
 
-.left-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-}
-
+.left-container,
 .right-container {
     display: flex;
     flex-direction: column;
@@ -23,7 +20,12 @@
     width: 50%;
     height: 100%;
     padding: 2rem;
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
 }
+
 
 
 .contact-form {
@@ -32,11 +34,12 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: 30px;
+    width: 100%;
+    padding: 30px, 0px, 30px, 0px;
 }
 
 mat-card {
-    // width: 300px;
+    width: 100%;
     padding: 10px 10px 20px 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,6 +55,7 @@ mat-card-content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 90%;
 }
 
 .mat-mdc-card {
@@ -65,4 +69,27 @@ mat-card-content {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.contact-field {
+    width: 100%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.button-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >button {
+        width: 100%;
+    }
+}
+
+.filler {
+    height: auto; // The logo will take the full height of its parent (logo-container)
+    width: 100%; // This will keep the aspect ratio of the logo
+    max-width: 100%;
 }
