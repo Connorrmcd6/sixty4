@@ -39,10 +39,30 @@
     }
 }
 
-.button-container {
+.default-button-container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: inherit;
     gap: 30px;
+}
+
+.hidden-button-container {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .default-button-container {
+        display: none;
+    }
+
+    .hidden-button-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hidden-button-container button {
+        display: block;
+        margin-right: 10px;
+    }
 }
