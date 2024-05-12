@@ -1,70 +1,118 @@
+/* Common styles */
 .footer-container {
     background-color: #333333;
     padding: 20px 0;
     text-align: center;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .max-width-container {
-    display: flex;
     width: 100%;
-    height: 100%;
     max-width: 1280px;
-    justify-content: space-between;
     margin: auto;
 }
 
 .footer-content {
-    padding-left: 5rem;
-    max-width: 1280px;
-    padding-right: 5rem;
-    color: #fff;
-    font-size: 14px;
     display: flex;
     justify-content: space-between;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 5rem;
+}
 
-    >div {
-        flex: 1;
+.logo {
+    width: 120px; /* Initial width for the logo */
+}
+
+/* Styles for desktop view (above 900px) */
+@media (min-width: 900px) {
+    .footer-content-mobile {
+        display: none; /* Hide mobile footer content */
+    }
+
+    .footer-content {
+        display: flex;
+    }
+
+    .footer-content .footer-content-vertical {
+        display: none; /* Hide mobile footer content when in desktop view */
+    }
+
+    .footer-content .logo-container-vertical {
+        display: none; /* Hide mobile logo container in desktop view */
+    }
+
+    /* Adjust spacing between sections in desktop view */
+    .footer-content > div {
         border-right: 0.5px solid #8B8B8B;
+        padding: 1rem; /* Add padding to each section */
+    }
 
-        &:last-child {
-            border-right: none;
-        }
+    .footer-content > div:last-child {
+        border-right: none; /* Remove border from the last section */
+    }
+
+    .logo {
+        width: 140px; /* Larger logo size for desktop */
     }
 }
 
+/* Styles for mobile view (below 900px) */
+@media (max-width: 899px) {
+    .footer-content {
+        display: none; /* Hide desktop footer content */
+    }
 
-.logo-container {
-    display: flex;
-    align-items: flex-start;
-    padding: 1rem;
+    .footer-content-mobile {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        font-size: 14px;
+        padding: 0 1rem; /* Adjust mobile padding */
+    }
+
+    .footer-content-mobile .logo-container {
+        padding: 1rem;
+        text-align: center; /* Center align logo in mobile view */
+    }
+
+    .footer-content-mobile .header-items-container,
+    .footer-content-mobile .social-container-vertical,
+    .footer-content-mobile .actions-container-vertical {
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align items in mobile view */
+    }
+
+    .footer-content-mobile .social-container-vertical .social-item,
+    .footer-content-mobile .actions-container-vertical .action-item {
+        padding: 0.5rem;
+    }
+
+    /* Adjust vertical alignment and spacing */
+    .footer-content-mobile > div {
+        border-bottom: 0.5px solid #8B8B8B;
+        padding: 1rem;
+        width: 100%; /* Ensure sections take full width */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .footer-content-mobile > div:last-child {
+        border-bottom: none; /* Remove border from the last section */
+    }
+
+    .logo {
+        width: 100px; /* Smaller logo size for mobile */
+    }
 }
 
-.header-items-container {
-    padding-left: 5rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
-}
-
-.socials-container {
-    padding-left: 5rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
-}
-
-.actions-container {
-    padding-left: 5rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    text-align: left;
+/* Dynamic logo sizing based on viewport width */
+@media (max-width: 899px) {
+    .logo {
+        width: 20vw; /* Set logo width as 20% of viewport width */
+        max-width: 100px; /* Limit maximum logo width to 100px */
+    }
 }
