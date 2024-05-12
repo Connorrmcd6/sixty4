@@ -12,6 +12,8 @@ $primary-color: #333333;
     padding-bottom: 40px;
     width: 100%;
     display: flex;
+    word-wrap: break-word;
+    line-height: 65px;
     // background-color: red;
 }
 
@@ -22,10 +24,10 @@ $primary-color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 100%;
     font-family: "Lora", serif;
     // background-color: blue;
-    font-size: 60px;
+    font-size: 56px;
     color: #333333;
 }
 
@@ -34,14 +36,16 @@ $primary-color: #333333;
  */
 .animated-tagline span {
     // background-color: green;
-    padding: 5px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #333333;
-    height: 60px;
-    margin-left: 18px;
+    height: 100%;
+    padding-bottom: 2px;
+    margin-left: 16px;
+
+
 }
 
 /**
@@ -49,9 +53,9 @@ $primary-color: #333333;
  */
 .animated-tagline span::before {
     content: "premium.";
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lexend', sans-serif;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 56px;
     animation: words 12s infinite;
 }
 
