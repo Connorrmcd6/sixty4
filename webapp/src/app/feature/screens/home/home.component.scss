@@ -1,3 +1,130 @@
-.t {
+/**
+ * This SCSS file contains styles for the home component.
+ */
+
+$primary-color: #333333;
+
+/**
+ * Styles for the tagline container.
+ */
+.tagline-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    display: flex;
+    // background-color: red;
+}
+
+/**
+ * Styles for the animated tagline.
+ */
+.animated-tagline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
     font-family: "Lora", serif;
+    // background-color: blue;
+    font-size: 60px;
+    color: #333333;
+}
+
+/**
+ * Styles for the span element within the animated tagline.
+ */
+.animated-tagline span {
+    // background-color: green;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    height: 60px;
+    margin-left: 18px;
+}
+
+/**
+ * Styles for the content before the span element.
+ */
+.animated-tagline span::before {
+    content: "premium.";
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    animation: words 12s infinite;
+}
+
+/**
+ * Styles for the content after the span element.
+ */
+.animated-tagline span::after {
+    content: "";
+    position: absolute;
+    color: #333333;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid #333333;
+    right: -8px;
+    animation: cursor .8s infinite, typing 4s infinite;
+}
+
+/**
+ * @keyframes cursor
+ * 
+ * This is a CSS animation that simulates a cursor effect.
+ * The animation changes the border-left property of an element to `2px solid #ffffff` at the end of the animation duration.
+ */
+@keyframes cursor {
+    to {
+        border-left: 2px solid #ffffff
+    }
+}
+
+/**
+ * @keyframes words
+ * 
+ * This is a CSS animation that changes the `content` property of an element at different points in the animation timeline.
+ * The `content` property is typically used with pseudo-elements (`::before` and `::after`) to insert generated content.
+ * In this animation, the `content` property changes between "premium.", "durable.", and "affordable." at different intervals.
+ */
+@keyframes words {
+
+    0%,
+    33% {
+        content: "premium.";
+    }
+
+    34%,
+    66% {
+        content: "durable.";
+    }
+
+    67%,
+    100% {
+        content: "affordable.";
+    }
+}
+
+/**
+ * @keyframes typing
+ * 
+ * This is a CSS animation that changes the `width` property of an element at different points in the animation timeline.
+ * The element starts at full width (`calc(100% + 8px)`), contracts to zero width at the midpoint of the animation, and then expands back to full width by the end of the animation.
+ * This creates a typing effect, where the element appears to expand and contract.
+ * 
+ */
+@keyframes typing {
+    0% {
+        width: calc(100% + 8px);
+    }
+
+    50% {
+        width: 0;
+    }
+
+    100% {
+        width: calc(100% + 8px);
+    }
 }
