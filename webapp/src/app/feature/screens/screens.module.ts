@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { TaglineComponent } from './home/tagline/tagline.component';
+import { CarouselComponent } from './home/carousel/carousel.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { TaglineComponent } from './home/tagline/tagline.component';
     AboutComponent,
     ContactComponent,
     TaglineComponent,
+    CarouselComponent,
   ],
   imports: [
     CommonModule,
