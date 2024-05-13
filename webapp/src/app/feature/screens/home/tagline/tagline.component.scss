@@ -8,42 +8,42 @@ $primary-color: #333333;
   * Styles for the tagline container.
   */
 .tagline-container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    width: 100%;
-    display: flex;
-    word-wrap: break-word;
-    line-height: 65px;
-    // background-color: red;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  display: flex;
+  word-wrap: break-word;
+  line-height: 65px;
+  // background-color: red;
 }
 
 /**
   * Styles for the animated tagline.
   */
 .animated-tagline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-family: "Lora", serif;
-    // background-color: blue;
-    font-size: 56px;
-    color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Lora", serif;
+  // background-color: blue;
+  font-size: 56px;
+  color: #333333;
 }
 
 /**
   * Styles for the span element within the animated tagline.
   */
 .animated-tagline span {
-    // background-color: green;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333333;
-    height: 100%;
-    padding-bottom: 2px;
-    margin-left: 16px;
+  // background-color: green;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  height: 100%;
+  padding-bottom: 2px;
+  margin-left: 16px;
 
 
 }
@@ -52,26 +52,26 @@ $primary-color: #333333;
   * Styles for the content before the span element.
   */
 .animated-tagline span::before {
-    content: "premium.";
-    font-family: 'Lexend', sans-serif;
-    font-weight: bold;
-    font-size: 56px;
-    animation: words 12s infinite;
+  content: "premium.";
+  font-family: 'Lexend', sans-serif;
+  font-weight: bold;
+  font-size: 56px;
+  animation: words 20s infinite;
 }
 
 /**
   * Styles for the content after the span element.
   */
 .animated-tagline span::after {
-    content: "";
-    position: absolute;
-    color: #333333;
-    width: calc(100% + 8px);
-    height: 100%;
-    background-color: #ffffff;
-    border-left: 2px solid #333333;
-    right: -8px;
-    animation: cursor .8s infinite, typing 4s infinite;
+  content: "";
+  position: absolute;
+  color: #333333;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: #ffffff;
+  border-left: 2px solid #333333;
+  right: -8px;
+  animation: cursor .8s infinite, typing 4s infinite;
 }
 
 /**
@@ -81,9 +81,9 @@ $primary-color: #333333;
   * The animation changes the border-left property of an element to `2px solid #ffffff` at the end of the animation duration.
   */
 @keyframes cursor {
-    to {
-        border-left: 2px solid #ffffff
-    }
+  to {
+    border-left: 2px solid #ffffff
+  }
 }
 
 /**
@@ -95,20 +95,36 @@ $primary-color: #333333;
   */
 @keyframes words {
 
-    0%,
-    33% {
-        content: "premium.";
-    }
+  0%,
+  20% {
+    content: "premium.";
+    color: #ED5564;
+  }
 
-    34%,
-    66% {
-        content: "durable.";
-    }
+  21%,
+  40% {
+    content: "durable.";
+    color: #FFCE54;
+  }
 
-    67%,
-    100% {
-        content: "affordable.";
-    }
+  41%,
+  60% {
+    content: "affordable.";
+    color: #A0D568;
+  }
+
+  61%,
+  80% {
+    content: "unique.";
+    color: #4FC1E8;
+  }
+
+  81%,
+  100% {
+    content: "versatile.";
+    color: #AC92EB;
+  }
+
 }
 
 /**
@@ -120,15 +136,15 @@ $primary-color: #333333;
   * 
   */
 @keyframes typing {
-    0% {
-        width: calc(100% + 8px);
-    }
+  0% {
+    width: calc(100% + 8px);
+  }
 
-    50% {
-        width: 0;
-    }
+  50% {
+    width: 0;
+  }
 
-    100% {
-        width: calc(100% + 8px);
-    }
+  100% {
+    width: calc(100% + 8px);
+  }
 }
