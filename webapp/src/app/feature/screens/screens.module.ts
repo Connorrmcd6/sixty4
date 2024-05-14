@@ -23,7 +23,6 @@ import { MatIconModule } from '@angular/material/icon';
     AboutComponent,
     ContactComponent,
     TaglineComponent,
-    CarouselComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +33,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule,
     MatSelectModule,
     MatInputModule,
-    MatRadioModule
+    MatRadioModule,
+    CarouselComponent
   ]
 })
 export class ScreensModule { }

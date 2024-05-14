@@ -2,7 +2,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    background-color: aqua;
+    height: 60vh;
+    margin-top: 20px;
+}
+
+swiper-slide img {
+    height: 60vh;
+    border-radius: 32px;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto !important;
+}
+
+swiper-container {
+    display: inline-block;
+    width: auto;
 }
