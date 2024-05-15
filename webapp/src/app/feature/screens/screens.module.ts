@@ -14,6 +14,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { PortalComponent } from './portal/portal.component';
 
 
 
@@ -23,6 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
     AboutComponent,
     ContactComponent,
     TaglineComponent,
+    PortalComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +37,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatSelectModule,
     MatInputModule,
     MatRadioModule,
-    CarouselComponent
+    CarouselComponent,
+    MatTabsModule
   ]
 })
 export class ScreensModule { }
