@@ -11,3 +11,43 @@
     border-color: #333333;
     margin-right: 15px;
 }
+
+
+/* Vertically arrange containers 1, 2, 3 */
+.details-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+/* Horizontally arrange the left and right containers */
+.container-one,
+.container-two,
+.container-three {
+    display: flex;
+    flex-direction: row;
+}
+
+/* If you want the left and right containers to take up equal space */
+
+.right-container {
+    flex: 1;
+    font-family: "Lora", serif;
+}
+
+.right-container h2 {
+    font-family: "Lora", serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.left-container {
+    flex: 1;
+    font-family: "Lora", serif;
+}
+
+.left-container h2 {
+    font-family: "Lora", serif;
+    font-weight: 500;
+    font-size: 30px;
+}
