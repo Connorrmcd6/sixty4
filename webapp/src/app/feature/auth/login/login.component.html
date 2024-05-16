@@ -1,50 +1,50 @@
-<div class = "login-container">
-    <div class = "login-card-container">
+<div class="login-container">
+    <div class="login-card-container">
         <mat-card>
             <nav>
                 <button mat-icon-button color="primary" (click)="goBack()">
-                  <mat-icon>
-                    arrow_back
-                  </mat-icon>  
+                    <mat-icon>
+                        arrow_back
+                    </mat-icon>
                 </button>
             </nav>
             <div class="logo-container">
                 <img src="../../../../assets/logo-black.svg">
             </div>
-        <mat-card-content>
-            <mat-form-field appearance="outline" required>
-                <mat-label> Email </mat-label>
-                <input matInput placeholder="Email" type="text" #userEmail required>
-                <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
-            </mat-form-field>
+            <mat-card-content>
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Email </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
 
-            <mat-form-field appearance="outline">
-                <mat-label>Password</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'" #userPassword required>
-                <button color="primary" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" #userPassword required>
+                    <button color="primary" mat-icon-button matSuffix (click)="hide = !hide"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <div class="button-row">
+                    <button mat-raised-button type="submit"
+                        (click)="authService.SignIn(userEmail.value, userPassword.value)">Login</button>
+                </div>
+            </mat-card-content>
+            <div class="bottom-content">
+                <span class="account-message">
+                    Don't have an account?
+                </span>
+                <button mat-button color="primary" routerLink="/register">
+                    Sign Up
                 </button>
-            </mat-form-field>
-            <div class="button-row">
-                <button mat-raised-button (click)="authService.SignIn(userEmail.value, userPassword.value)">Login</button>
             </div>
-        </mat-card-content>
-        <div class="bottom-content">
-            <span class="account-message">
-                Don't have an account?
-            </span>
-            <button mat-button color="primary" routerLink="/register">
-                Sign Up
-            </button>
-        </div>
-        <div class="forgot-password">
-            
-            <button mat-button color="primary" routerLink="/forgot-password">
-                Forgot Password?
-            </button>
-        </div>
-    </mat-card>
+            <div class="forgot-password">
+
+                <button mat-button color="primary" routerLink="/forgot-password">
+                    Forgot Password?
+                </button>
+            </div>
+        </mat-card>
     </div>
 </div>
-
-
