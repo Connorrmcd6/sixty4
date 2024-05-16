@@ -7,6 +7,10 @@ import { LoginComponent } from './feature/auth/login/login.component';
 import { ForgotPasswordComponent } from './feature/auth/forgot-password/forgot-password.component';
 import { RegisterComponent } from './feature/auth/register/register.component';
 import { PortalComponent } from './feature/screens/portal/portal.component';
+import { DesignComponent } from './feature/screens/design/design.component';
+import { PackagingComponent } from './feature/screens/packaging/packaging.component';
+import { PricingComponent } from './feature/screens/pricing/pricing.component';
+import { ServicesComponent } from './feature/screens/services/services.component';
 
 
 const routes: Routes = [
@@ -18,6 +22,10 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'portal', component: PortalComponent },
+  { path: 'design', component: DesignComponent },
+  { path: 'packaging', component: PackagingComponent },
+  { path: 'pricing', component: PricingComponent },
+  { path: 'services', component: ServicesComponent },
   // more routes here
 ];
 

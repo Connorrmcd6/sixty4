@@ -9,15 +9,15 @@
                 <button mat-button color="primary" [matMenuTriggerFor]="services">Services</button>
 
                 <mat-menu #services="matMenu">
-                    <button mat-menu-item>
+                    <button mat-menu-item routerLink="/design">
                         <mat-icon>edit</mat-icon>
                         <span>Label Design</span>
                     </button>
-                    <button mat-menu-item>
+                    <button mat-menu-item routerLink="/services">
                         <mat-icon>local_printshop</mat-icon>
                         <span>Printing</span>
                     </button>
-                    <button mat-menu-item>
+                    <button mat-menu-item routerLink="/packaging">
                         <mat-icon>redeem</mat-icon>
                         <span>Packaging</span>
                     </button>
@@ -33,27 +33,27 @@
                 </button>
                 <mat-menu #menu="matMenu">
                     <button mat-menu-item routerLink="/home">
-                      <mat-icon>home</mat-icon>
-                      <span>Home</span>
+                        <mat-icon>home</mat-icon>
+                        <span>Home</span>
                     </button>
-                    <button mat-menu-item routerLink="/about"> 
-                      <mat-icon>info</mat-icon>
-                      <span>About</span>
+                    <button mat-menu-item routerLink="/about">
+                        <mat-icon>info</mat-icon>
+                        <span>About</span>
                     </button>
                     <button mat-menu-item routerLink="/contact">
                         <mat-icon>phone</mat-icon>
                         <span>Get in touch</span>
-                      </button>
-                      <button mat-menu-item [matMenuTriggerFor]="servicesMenu">
+                    </button>
+                    <button mat-menu-item [matMenuTriggerFor]="servicesMenu">
                         <mat-icon>work</mat-icon>
                         <span>Services</span>
-                      </button>
-                  </mat-menu>
-                  <mat-menu #servicesMenu="matMenu">
-                    <button mat-menu-item routerLink="/label-design">
+                    </button>
+                </mat-menu>
+                <mat-menu #servicesMenu="matMenu">
+                    <button mat-menu-item routerLink="/design">
                         <span>Label Design</span>
                     </button>
-                    <button mat-menu-item routerLink="/printing">
+                    <button mat-menu-item routerLink="/services">
                         <span>Printing</span>
                     </button>
                     <button mat-menu-item routerLink="/packaging">
@@ -69,5 +69,3 @@
     
     
     smaller than 900px then hide it and create a dropdown menu -->
-
- 
