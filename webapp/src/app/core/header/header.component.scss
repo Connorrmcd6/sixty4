@@ -27,10 +27,12 @@
     margin: auto;
 }
 
+
+
 .logo-container {
     display: flex;
     align-items: center; // Align the logo vertically in the middle
-    padding: 1rem;
+    padding: 0.5rem;
 
     .logo {
         height: 100%; // The logo will take the full height of its parent (logo-container)
