@@ -1,1 +1,28 @@
-<p>verify-email works!</p>
+<div class="page-container">
+    <div class="page-card-content">
+      <mat-card>
+        <div class="page-header">
+          <button mat-icon-button (click)="goBack()">
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+        </div>
+  
+        <mat-card-content>
+          <h3>Successfully signed up!</h3>
+          
+          <div class="verification-info" *ngIf="authService.userData as user">
+            <p class="text-center">A verification email has been sent to <strong>{{user.email}}</strong>. Please check your inbox and follow the instructions to complete the sign-up.</p>
+          </div>
+  
+          <div class="bottom-content">
+  
+            <div class="button-row">
+              <button mat-button color="primary" (click)="authService.SendVerificationMail()">Resend Verification Email</button>
+            </div>
+  
+            <button mat-button color="primary" routerLink="/login">Back to Login?</button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

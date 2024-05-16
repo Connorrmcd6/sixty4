@@ -11,6 +11,10 @@ import { DesignComponent } from './feature/screens/design/design.component';
 import { PackagingComponent } from './feature/screens/packaging/packaging.component';
 import { PricingComponent } from './feature/screens/pricing/pricing.component';
 import { ServicesComponent } from './feature/screens/services/services.component';
+import { VerifyEmailComponent } from './feature/auth/verify-email/verify-email.component';
+// route guard
+import { AuthGuard } from './shared/guard/auth.guard';
+
 
 
 const routes: Routes = [
@@ -21,11 +25,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'portal', component: PortalComponent },
+  { path: 'portal', component: PortalComponent, canActivate: [AuthGuard]  },
   { path: 'design', component: DesignComponent },
   { path: 'packaging', component: PackagingComponent },
   { path: 'pricing', component: PricingComponent },
   { path: 'services', component: ServicesComponent },
+  { path: 'verify-email-address', component: VerifyEmailComponent },
   // more routes here
 ];
 

@@ -14,7 +14,7 @@
         <mat-card-content>
             <mat-form-field appearance="outline" required>
                 <mat-label> Email </mat-label>
-                <input matInput placeholder="Email" type="text" #userEmail>
+                <input matInput placeholder="Email" type="text" #userEmail required>
                 <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
             </mat-form-field>
 
@@ -26,7 +26,7 @@
                 </button>
             </mat-form-field>
             <div class="button-row">
-                <button mat-raised-button>Login</button>
+                <button mat-raised-button (click)="authService.SignIn(userEmail.value, userPassword.value)">Login</button>
             </div>
         </mat-card-content>
         <div class="bottom-content">

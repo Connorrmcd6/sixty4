@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-// import { AuthService } from 'src/app/shared/services/auth.service';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -12,7 +12,7 @@ export class ForgotPasswordComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    // public authService: AuthService
+    public authService: AuthService
   ) {}
 
   goBack(): void {
