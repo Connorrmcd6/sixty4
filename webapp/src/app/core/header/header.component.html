@@ -1,71 +1,72 @@
 <div class="app-header" *ngIf="!hideHeader">
-    <mat-toolbar class="toolbar">
-        <div class="max-width-container">
-            <div class="logo-container">
-                <img class="logo" src="/assets/logo-black.svg" alt="Logo">
-            </div>
-            <div class="default-button-container">
-                <button mat-button color="primary" routerLink="/home">Home</button>
-                <button mat-button color="primary" [matMenuTriggerFor]="services">Services</button>
+  <mat-toolbar class="toolbar">
+    <div class="max-width-container">
+      <div class="logo-container">
+        <img class="logo" src="/assets/logo-black.svg" alt="Logo">
+      </div>
+      <div class="default-button-container">
+        <button mat-button color="primary" routerLink="/home">Home</button>
+        <button mat-button color="primary" [matMenuTriggerFor]="services">Services</button>
 
-                <mat-menu #services="matMenu">
-                    <button mat-menu-item routerLink="/design">
-                        <mat-icon>edit</mat-icon>
-                        <span>Label Design</span>
-                    </button>
-                    <button mat-menu-item routerLink="/services">
-                        <mat-icon>local_printshop</mat-icon>
-                        <span>Printing</span>
-                    </button>
-                    <button mat-menu-item routerLink="/packaging">
-                        <mat-icon>redeem</mat-icon>
-                        <span>Packaging</span>
-                    </button>
-                </mat-menu>
+        <mat-menu #services="matMenu">
+          <button mat-menu-item>
+            <mat-icon>edit</mat-icon>
+            <span>Label Design</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>local_printshop</mat-icon>
+            <span>Printing</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>redeem</mat-icon>
+            <span>Packaging</span>
+          </button>
+        </mat-menu>
 
-
-                <button mat-button color="primary" routerLink="/about">About</button>
-                <button mat-flat-button color="primary" routerLink="/contact">Get in touch!</button>
-            </div>
-            <div class="hidden-button-container">
-                <button mat-icon-button [matMenuTriggerFor]="menu">
-                    <mat-icon>menu</mat-icon>
-                </button>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item routerLink="/home">
-                        <mat-icon>home</mat-icon>
-                        <span>Home</span>
-                    </button>
-                    <button mat-menu-item routerLink="/about">
-                        <mat-icon>info</mat-icon>
-                        <span>About</span>
-                    </button>
-                    <button mat-menu-item routerLink="/contact">
-                        <mat-icon>phone</mat-icon>
-                        <span>Get in touch</span>
-                    </button>
-                    <button mat-menu-item [matMenuTriggerFor]="servicesMenu">
-                        <mat-icon>work</mat-icon>
-                        <span>Services</span>
-                    </button>
-                </mat-menu>
-                <mat-menu #servicesMenu="matMenu">
-                    <button mat-menu-item routerLink="/design">
-                        <span>Label Design</span>
-                    </button>
-                    <button mat-menu-item routerLink="/services">
-                        <span>Printing</span>
-                    </button>
-                    <button mat-menu-item routerLink="/packaging">
-                        <span>Packaging</span>
-                    </button>
-                </mat-menu>
-            </div>
-        </div>
-    </mat-toolbar>
+        <button mat-button color="primary" routerLink="/about">About</button>
+        <button mat-flat-button color="primary" routerLink="/contact">Get in touch!</button>
+      </div>
+      <div class="hidden-button-container">
+        <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/home">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </button>
+          <button mat-menu-item routerLink="/about">
+            <mat-icon>info</mat-icon>
+            <span>About</span>
+          </button>
+          <button mat-menu-item routerLink="/contact">
+            <mat-icon>phone</mat-icon>
+            <span>Get in touch</span>
+          </button>
+          <button mat-menu-item [matMenuTriggerFor]="servicesMenu">
+            <mat-icon>work</mat-icon>
+            <span>Services</span>
+          </button>
+        </mat-menu>
+        <mat-menu #servicesMenu="matMenu">
+          <button mat-menu-item routerLink="/label-design">
+            <span>Label Design</span>
+          </button>
+          <button mat-menu-item routerLink="/printing">
+            <span>Printing</span>
+          </button>
+          <button mat-menu-item routerLink="/packaging">
+            <span>Packaging</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-toolbar>
 </div>
 
+
 <!-- Make it that if header moves 
-    
-    
-    smaller than 900px then hide it and create a dropdown menu -->
+  
+  
+  smaller than 900px then hide it and create a dropdown menu -->
+
