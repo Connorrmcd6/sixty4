@@ -1,10 +1,46 @@
 .portal-container {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    // justify-content: center;
+    padding-top: 5vh;
+    min-height: 95vh;
     background-color: #333333;
+
+}
+
+.user-info {
+    border: 1px solid white;
+    border-radius: 16px;
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vh;
+    /* Change this to 'column' if you want the items to be stacked vertically */
+}
+
+.user-field {
+    text-align: left;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+
+    .mat-mdc-raised-button.mat-unthemed {
+        --mdc-protected-button-container-color: #FF4C46;
+        --mdc-protected-button-label-text-color: #fff;
+        border-radius: 16px;
+    }
 
 }
 
@@ -16,13 +52,12 @@ mat-card {
     margin-top: 20px;
 }
 
-
-
-.mat-mdc-raised-button.mat-unthemed {
-    --mdc-protected-button-container-color: #FF4C46;
-    --mdc-protected-button-label-text-color: #fff;
+.signout-button {
+    background-color: #CECDD3;
+    color: #333333;
     border-radius: 16px;
 }
+
 
 
 .mat-mdc-tab-group,
