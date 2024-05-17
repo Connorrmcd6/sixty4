@@ -26,7 +26,8 @@ import { MatTableModule } from '@angular/material/table';
     AboutComponent,
     ContactComponent,
     TaglineComponent,
-    PortalComponent
+    PortalComponent,
+
   ],
   imports: [
     CommonModule,
