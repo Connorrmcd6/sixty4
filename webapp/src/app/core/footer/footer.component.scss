@@ -19,6 +19,7 @@
     color: #fff;
     font-size: 14px;
     padding: 0 5rem;
+    width: 100%;
 }
 
 .logo {
@@ -33,6 +34,7 @@
 
     .footer-content {
         display: flex;
+        justify-content: space-between; /* Distribute space between sections */
     }
 
     .footer-content .footer-content-vertical {
@@ -47,6 +49,10 @@
     .footer-content > div {
         border-right: 0.5px solid #8B8B8B;
         padding: 1rem; /* Add padding to each section */
+        display: flex;
+        flex-direction: column; /* Ensure the content stacks vertically */
+        align-items: flex-start; /* Align items to the left */
+        flex-grow: 1; /* Allow sections to grow and take up available space */
     }
 
     .footer-content > div:last-child {
