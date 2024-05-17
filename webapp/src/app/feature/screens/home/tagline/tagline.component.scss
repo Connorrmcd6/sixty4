@@ -17,12 +17,13 @@ $primary-color: #333333;
 
   /* This will apply when the viewport is between 770px and 1200px */
   @media (min-width: 550px) and (max-width: 800px) {
-    padding-top: 10px;
+    padding-top: 25px;
   }
 
   /* This will apply when the viewport is 770px or less */
   @media (max-width: 549px) {
-    padding: 0px;
+    padding-top: 25px;
+    padding-bottom: 0px;
   }
 }
 
@@ -30,7 +31,6 @@ $primary-color: #333333;
   * Styles for the animated tagline.
   */
 .animated-tagline {
-  padding-left: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,14 +40,24 @@ $primary-color: #333333;
   font-size: 56px;
   color: #333333;
 
-  /* This will apply when the viewport is between 770px and 1200px */
-  @media (min-width: 550px) and (max-width: 800px) {
+
+  @media (min-width: 651px) and (max-width: 800px) {
     font-size: 40px;
   }
 
   /* This will apply when the viewport is 770px or less */
-  @media (max-width: 549px) {
+  @media (min-width: 551px) and (max-width: 650px) {
+    font-size: 30px;
+  }
+
+  /* This will apply when the viewport is 770px or less */
+  @media (min-width: 450px) and (max-width: 549px) {
     font-size: 24px;
+  }
+
+  /* This will apply when the viewport is 770px or less */
+  @media (max-width: 449px) {
+    font-size: 18px;
   }
 }
 
@@ -62,8 +72,30 @@ $primary-color: #333333;
   align-items: center;
   color: #333333;
   height: 100%;
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   margin-left: 16px;
+
+  @media (min-width: 651px) and (max-width: 800px) {
+    margin-left: 14px;
+  }
+
+  /* This will apply when the viewport is 770px or less */
+  @media (min-width: 551px) and (max-width: 650px) {
+    margin-left: 12px;
+    padding-bottom: 0px;
+  }
+
+  /* This will apply when the viewport is 770px or less */
+  @media (min-width: 450px) and (max-width: 549px) {
+    margin-left: 10px;
+    padding-bottom: 0px;
+  }
+
+  /* This will apply when the viewport is 770px or less */
+  @media (max-width: 449px) {
+    margin-left: 6px;
+    padding-bottom: 0px;
+  }
 
 }
 
@@ -78,13 +110,23 @@ $primary-color: #333333;
   animation: words 20s infinite;
 
   /* This will apply when the viewport is between 770px and 1200px */
-  @media (min-width: 550px) and (max-width: 800px) {
+  @media (min-width: 651px) and (max-width: 800px) {
     font-size: 40px;
   }
 
   /* This will apply when the viewport is 770px or less */
-  @media (max-width: 549px) {
+  @media (min-width: 551px) and (max-width: 650px) {
+    font-size: 30px;
+  }
+
+  /* This will apply when the viewport is 770px or less */
+  @media (min-width: 450px) and (max-width: 549px) {
     font-size: 24px;
+  }
+
+  /* This will apply when the viewport is 770px or less */
+  @media (max-width: 449px) {
+    font-size: 18px;
   }
 }
 

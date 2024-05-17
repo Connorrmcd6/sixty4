@@ -13,13 +13,15 @@ swiper-slide img {
 
 
     /* This will apply when the viewport is between 770px and 1200px */
-    @media (min-width: 550px) and (max-width: 800px) {
+    @media (min-width: 800px) and (max-width: 1000px) {
         height: 40vh;
+        border-radius: 24px;
     }
 
     /* This will apply when the viewport is 770px or less */
-    @media (max-width: 549px) {
-        height: 20vh;
+    @media (max-width: 799px) {
+        height: 15vh;
+        border-radius: 16px;
     }
 }
 

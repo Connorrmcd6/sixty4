@@ -157,10 +157,19 @@ body {
 
 @media (max-width: 599px) {
     .safe-area {
-        padding-top: 56px;
+        padding-top: 64px;
         max-width: 1280px;
     }
+
 }
+
+@media (max-width: 1279px) {
+    .safe-area {
+        padding: 2rem
+            /* Adjust this value as needed */
+    }
+}
+
 
 
 // see this --- https://dev.to/oncode/display-your-pwa-website-fullscreen-4776
