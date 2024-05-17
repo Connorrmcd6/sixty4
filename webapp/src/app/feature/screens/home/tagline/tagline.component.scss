@@ -14,7 +14,16 @@ $primary-color: #333333;
   display: flex;
   word-wrap: break-word;
   line-height: 65px;
-  // background-color: red;
+
+  /* This will apply when the viewport is between 770px and 1200px */
+  @media (min-width: 550px) and (max-width: 800px) {
+    padding-top: 10px;
+  }
+
+  /* This will apply when the viewport is 770px or less */
+  @media (max-width: 549px) {
+    padding: 0px;
+  }
 }
 
 /**
