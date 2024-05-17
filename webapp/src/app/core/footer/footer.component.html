@@ -45,5 +45,62 @@
 
             </div>
         </div>
+
+        <div class="footer-content-mobile"> <!-- Unique class name -->
+            <div class="logo-container-vertical"> <!-- Unique class name -->
+                <img class="logo" src="/assets/logo-white.svg" alt="Logo">
+            </div>
+        
+            <div class="header-items-container-vertical"> <!-- Unique class name -->
+                <div class="header-item">
+                    <button mat-button color="accent" routerLink="/home">
+                        <mat-icon color="accent" matSuffix>home</mat-icon>Home
+                    </button>
+                </div>
+                <div class="header-item">
+                    <button mat-button color="accent" routerLink="">
+                        <mat-icon color="accent" matSuffix>work</mat-icon>Services
+                    </button>
+                </div>
+                <div class="header-item">
+                    <button mat-button color="accent" routerLink="/about">
+                        <mat-icon color="accent" matSuffix>info</mat-icon>About
+                    </button>
+                </div>
+                <div class="header-item">
+                    <button mat-button color="accent" routerLink="/contact">
+                        <mat-icon color="accent" matSuffix>phone</mat-icon>Contact
+                    </button>
+                </div>
+            </div>
+        
+            <div class="social-container-vertical"> <!-- Unique class name -->
+                <div class="social-item">
+                    <button mat-button color="accent" (click)="openURL('https://www.linkedin.com/company/sixty4-print-solutions/')">
+                        LinkedIn
+                    </button>
+                </div>
+                <div class="social-item">
+                    <button mat-button color="accent" (click)="openURL('https://www.instagram.com/sixty4print/')">
+                        Instagram
+                    </button>
+                </div>
+            </div>
+        
+            <div class="actions-container-vertical"> <!-- Unique class name -->
+                <div class="action-item">
+                    <button mat-button routerLink="/login" color="accent">
+                        <mat-icon color="accent" matSuffix>person</mat-icon>Sales Portal
+                    </button>
+                </div>
+                <div class="action-item">
+                    <button mat-button color="accent" (click)="openURL('https://maps.app.goo.gl/LawQfz8T1khaz5Hq9')">
+                        <mat-icon color="accent" matSuffix>location_on</mat-icon>Location
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
 </div>
