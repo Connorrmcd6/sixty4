@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { TaglineComponent } from './home/tagline/tagline.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
+import { TableComponent } from './portal/table/table.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
@@ -16,7 +17,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { PortalComponent } from './portal/portal.component';
-
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PortalComponent } from './portal/portal.component';
     AboutComponent,
     ContactComponent,
     TaglineComponent,
-    PortalComponent
+    PortalComponent,
+
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,9 @@ import { PortalComponent } from './portal/portal.component';
     MatInputModule,
     MatRadioModule,
     CarouselComponent,
-    MatTabsModule
+    TableComponent,
+    MatTabsModule,
+    MatTableModule
   ]
 })
 export class ScreensModule { }
