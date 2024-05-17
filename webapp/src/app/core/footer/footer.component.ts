@@ -14,7 +14,7 @@ export class FooterComponent {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.hideFooter = event.urlAfterRedirects === '/login' || event.urlAfterRedirects === '/register' || event.urlAfterRedirects === '/forgot-password' || event.urlAfterRedirects === '/portal';
+        this.hideFooter = event.urlAfterRedirects === '/login' || event.urlAfterRedirects === '/register' || event.urlAfterRedirects === '/forgot-password' || event.urlAfterRedirects === '/portal' || event.urlAfterRedirects === '/verify-email';
       }
     });
   }
