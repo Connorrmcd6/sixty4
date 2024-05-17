@@ -2,12 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     flex-direction: row;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         flex-direction: column;
+        height: auto;
     }
 }
 
@@ -17,16 +18,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
     height: 100%;
     padding: 2rem;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         width: 100%;
+        padding: 0.5rem;
     }
 }
 
 
+
+.left-container {
+    flex: 0 0 60%;
+}
+
+.right-container {
+    flex: 0 0 40%;
+}
 
 .contact-form {
     display: flex;
@@ -95,4 +104,9 @@ mat-card-content {
     height: auto; // The logo will take the full height of its parent (logo-container)
     width: 75%; // This will keep the aspect ratio of the logo
     max-width: 75%;
+
+    @media (max-width: 768px) {
+        width: 60%; // This will keep the aspect ratio of the logo
+        max-width: 60%;
+    }
 }
