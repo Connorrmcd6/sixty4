@@ -31,11 +31,14 @@
                         <app-table></app-table>
                     </mat-card-content>
                 </mat-card>
-                <div class="button-container">
-                    <button mat-raised-button type="button">
-                        <mat-icon>add</mat-icon>NEW QUOTE
-                    </button>
-                </div>
+                <mat-card-actions>
+                    <div class="button-container">
+                        <button mat-raised-button type="button">
+                            <mat-icon>add</mat-icon>NEW QUOTE
+                        </button>
+                    </div>
+                </mat-card-actions>
+
 
             </mat-tab>
 
@@ -54,6 +57,7 @@
                         <mat-card-title>Clients</mat-card-title>
                     </mat-card-header>
                     <mat-card-content>
+                        <app-table></app-table>
                     </mat-card-content>
                 </mat-card>
 
@@ -68,11 +72,6 @@
                         <app-table></app-table>
                     </mat-card-content>
                 </mat-card>
-                <div class="button-container">
-                    <button mat-raised-button type="button">
-                        <mat-icon>add</mat-icon>NEW JOB
-                    </button>
-                </div>
             </mat-tab>
         </mat-tab-group>
     </div>
