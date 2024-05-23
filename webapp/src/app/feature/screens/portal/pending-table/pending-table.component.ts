@@ -55,7 +55,7 @@ const NAMES: string[] = [
   imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule],
 })
 export class PendingTableComponent {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
+  displayedColumns: string[] = ['name', 'id', 'progress', 'fruit'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

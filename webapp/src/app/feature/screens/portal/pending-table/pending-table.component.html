@@ -1,5 +1,5 @@
 <div class="search-bar-wrapper">
-    <mat-form-field class="search-bar">
+    <mat-form-field class="search-bar" appearance="outline" subscriptSizing="dynamic">
         <mat-label>Search</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Client Name or Quote Number" #input>
         <mat-icon matSuffix>search</mat-icon>
@@ -7,7 +7,7 @@
 </div>
 
 
-<div class="mat-elevation-z0">
+<div class="mat-elevation-z0 table">
     <table mat-table [dataSource]="dataSource" matSort>
 
         <!-- ID Column -->
