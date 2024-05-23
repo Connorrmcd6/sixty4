@@ -19,11 +19,22 @@
     <div class="tabs-wrapper">
         <mat-tab-group mat-stretch-tabs mat-align-tabs="center">
             <mat-tab label="QUOTES">
-                <div class="table-content">
+                <mat-card class="table-card">
+                    <mat-card-header>
+                        <mat-card-title>Pending Quotes</mat-card-title>
+                    </mat-card-header>
                     <app-pending-table></app-pending-table>
+                </mat-card>
+
+                <mat-card class="table-card">
+                    <mat-card-header>
+                        <mat-card-title>Quote History</mat-card-title>
+                    </mat-card-header>
                     <app-history-table></app-history-table>
-                </div>
+                </mat-card>
             </mat-tab>
+
+
             <mat-tab label="CLIENTS"> Content 2 </mat-tab>
             <mat-tab label="JOBS"> Content 3 </mat-tab>
         </mat-tab-group>

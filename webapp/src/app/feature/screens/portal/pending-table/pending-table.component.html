@@ -1,10 +1,13 @@
-<mat-form-field>
-    <mat-label>Search</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Client Name or Quote Number" #input>
-    <mat-icon matPrefix>search</mat-icon>
-</mat-form-field>
+<div class="search-bar-wrapper">
+    <mat-form-field class="search-bar">
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Client Name or Quote Number" #input>
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+</div>
 
-<div class="mat-elevation-z8">
+
+<div class="mat-elevation-z0">
     <table mat-table [dataSource]="dataSource" matSort>
 
         <!-- ID Column -->
