@@ -10,69 +10,39 @@
 
 }
 
-.user-info {
-    border: 1px solid white;
-    border-radius: 16px;
-    background-color: transparent;
-    color: white;
-    padding: 20px;
-    width: 50%;
+
+.sales-toolbar {
+    width: 100%;
+    max-width: 560px;
+    border-radius: 8px;
     justify-content: space-between;
     align-items: center;
+}
+
+.user-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff; // adjust the color as needed
+    color: #fff; // adjust the color as needed
     display: flex;
-    flex-direction: row;
-    margin-bottom: 5vh;
-    /* Change this to 'column' if you want the items to be stacked vertically */
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
-.user-field {
-    text-align: left;
-}
-
-.button-container {
+.right-aligned-items {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 20px;
-
-    .mat-mdc-raised-button.mat-unthemed {
-        --mdc-protected-button-container-color: #FF4C46;
-        --mdc-protected-button-label-text-color: #fff;
-        border-radius: 16px;
-    }
-
-}
-
-.tabs-wrapper {
-    width: 50%;
-}
-
-mat-card {
-    margin-top: 20px;
-}
-
-.signout-button {
-    background-color: #CECDD3;
-    color: #333333;
-    border-radius: 16px;
+    align-items: center;
 }
 
 
-
-.mat-mdc-tab-group,
-.mat-mdc-tab-nav-bar {
-    --mdc-tab-indicator-active-indicator-color: #ffffff;
-    --mat-tab-header-disabled-ripple-color: rgba(255, 255, 255, 0.54);
-    --mat-tab-header-pagination-icon-color: #000;
-    --mat-tab-header-inactive-label-text-color: rgba(255, 255, 255, 0.54);
-    --mat-tab-header-active-label-text-color: #ffffff;
-    --mat-tab-header-active-ripple-color: #ffffff;
-    --mat-tab-header-inactive-ripple-color: #ffffff;
-    --mat-tab-header-inactive-focus-label-text-color: rgba(255, 255, 255, 0.54);
-    --mat-tab-header-inactive-hover-label-text-color: rgba(255, 255, 255, 0.54);
-    --mat-tab-header-active-focus-label-text-color: #ffffff;
-    --mat-tab-header-active-hover-label-text-color: #ffffff;
-    --mat-tab-header-active-focus-indicator-color: #ffffff;
-    --mat-tab-header-active-hover-indicator-color: #ffffff;
+.company-chip {
+    background-color: rgba(51, 51, 51, 0.80);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 24px;
+    padding: 0 2rem;
 }

@@ -18,6 +18,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { PortalComponent } from './portal/portal.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
 
 
 @NgModule({
@@ -42,7 +46,11 @@ import { MatTableModule } from '@angular/material/table';
     CarouselComponent,
     TableComponent,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatToolbarModule,
+    MatChipsModule,
+    MatMenuModule,
+    MatBadgeModule
   ]
 })
 export class ScreensModule { }

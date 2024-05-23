@@ -1,78 +1,48 @@
 <div class="portal-container">
-    <div class="user-info">
-        <div class="user-field">
-            <p><strong>USERNAME:</strong></p>
-            <p>Bradley</p>
+    <mat-toolbar class="sales-toolbar">
+        <button mat-button class="company-chip">{{companyName}}</button>
+
+        <div class="right-aligned-items">
+            <button mat-icon-button color="primary" [matMenuTriggerFor]="newMenu">
+                <mat-icon>add</mat-icon>
+            </button>
+
+            <button mat-icon-button color="primary" [matMenuTriggerFor]="notificaitons">
+                <mat-icon matBadge="{{notifications.length}}" matBadgeHidden="{{notifications.length == 0}}"
+                    matBadgeColor="warn">notifications_none</mat-icon>
+            </button>
+
+            <div class="user-circle" [matMenuTriggerFor]="userMenu">{{userInitials}}</div>
         </div>
-        <div class="user-field">
-            <p><strong>ROLE:</strong></p>
-            <p>Sales Representative</p>
-        </div>
-        <button class="signout-button" mat-raised-button type="button" (click)="authService.SignOut()">Sign Out</button>
-    </div>
-
-    <div class="tabs-wrapper">
-        <mat-tab-group mat-stretch-tabs mat-align-tabs="center">
-            <mat-tab label="QUOTES">
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>OPEN QUOTES</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <app-table></app-table>
-                    </mat-card-content>
-                </mat-card>
-
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>QUOTE HISTORY</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <app-table></app-table>
-                    </mat-card-content>
-                </mat-card>
-                <mat-card-actions>
-                    <div class="button-container">
-                        <button mat-raised-button type="button">
-                            <mat-icon>add</mat-icon>NEW QUOTE
-                        </button>
-                    </div>
-                </mat-card-actions>
+    </mat-toolbar>
 
 
-            </mat-tab>
 
-            <mat-tab label="CLIENTS">
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>Orders</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <app-table></app-table>
-                    </mat-card-content>
-                </mat-card>
-
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>Clients</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <app-table></app-table>
-                    </mat-card-content>
-                </mat-card>
-
-            </mat-tab>
-
-            <mat-tab label="JOB CARDS">
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>JOB HISTORY</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <app-table></app-table>
-                    </mat-card-content>
-                </mat-card>
-            </mat-tab>
-        </mat-tab-group>
-    </div>
 </div>
+
+
+<mat-menu #newMenu="matMenu">
+    <button mat-menu-item>Quote</button>
+    <button mat-menu-item>Client</button>
+    <button mat-menu-item>Job Card</button>
+</mat-menu>
+
+<mat-menu #notificaitons="matMenu">
+    <ng-container *ngIf="notifications.length; else noNotifications">
+        <button mat-menu-item *ngFor="let notification of notifications">
+            {{notification}}
+        </button>
+    </ng-container>
+    <ng-template #noNotifications>
+        <button mat-menu-item disabled>No notifications</button>
+    </ng-template>
+</mat-menu>
+
+<mat-menu #userMenu="matMenu">
+    <button mat-menu-item>User Settings
+        <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-menu-item (click)="authService.SignOut()">Sign Out
+        <mat-icon>exit_to_app</mat-icon>
+    </button>
+</mat-menu>

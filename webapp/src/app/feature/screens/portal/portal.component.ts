@@ -7,7 +7,12 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrl: './portal.component.scss'
 })
 export class PortalComponent implements OnInit {
-  constructor(public authService: AuthService) {}
-  ngOnInit(): void {}
+
+  companyName: string = "Sixty4"
+  userInitials: string = "BR"
+  notifications: Array<any> = []; // add notifications here
+
+  constructor(public authService: AuthService) { }
+  ngOnInit(): void { }
 }
 
