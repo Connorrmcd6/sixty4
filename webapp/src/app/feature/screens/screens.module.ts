@@ -5,7 +5,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { TaglineComponent } from './home/tagline/tagline.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
-import { TableComponent } from './portal/table/table.component';
+import { PendingTableComponent } from './portal/pending-table/pending-table.component';
+import { HistoryTableComponent } from './portal/history-table/history-table.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
@@ -44,7 +45,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatInputModule,
     MatRadioModule,
     CarouselComponent,
-    TableComponent,
+    PendingTableComponent,
+    HistoryTableComponent,
     MatTabsModule,
     MatTableModule,
     MatToolbarModule,

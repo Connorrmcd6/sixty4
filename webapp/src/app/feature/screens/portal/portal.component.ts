@@ -10,7 +10,7 @@ export class PortalComponent implements OnInit {
 
   companyName: string = "Sixty4"
   userInitials: string = "BR"
-  notifications: Array<any> = []; // add notifications here
+  notifications: Array<any> = ["Connor has requested a review", "Ryan approved QUO00102"]; // add notifications here
 
   constructor(public authService: AuthService) { }
   ngOnInit(): void { }

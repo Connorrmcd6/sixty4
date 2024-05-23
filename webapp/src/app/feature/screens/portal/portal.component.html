@@ -1,6 +1,6 @@
 <div class="portal-container">
     <mat-toolbar class="sales-toolbar">
-        <button mat-button class="company-chip">{{companyName}}</button>
+        <button mat-button class="company-chip" matRippleDisabled>{{companyName}}</button>
 
         <div class="right-aligned-items">
             <button mat-icon-button color="primary" [matMenuTriggerFor]="newMenu">
@@ -16,7 +16,16 @@
         </div>
     </mat-toolbar>
 
-
+    <div class="tabs-wrapper">
+        <mat-tab-group mat-stretch-tabs mat-align-tabs="center">
+            <mat-tab label="QUOTES">
+                <app-pending-table></app-pending-table>
+                <app-history-table></app-history-table>
+            </mat-tab>
+            <mat-tab label="CLIENTS"> Content 2 </mat-tab>
+            <mat-tab label="JOBS"> Content 3 </mat-tab>
+        </mat-tab-group>
+    </div>
 
 </div>
 

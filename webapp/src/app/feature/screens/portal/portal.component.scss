@@ -8,6 +8,10 @@
     min-height: 95vh;
     background-color: #333333;
 
+    @media (max-width: 560px) {
+        padding-top: 0;
+        min-height: 100vh;
+    }
 }
 
 
@@ -17,6 +21,10 @@
     border-radius: 8px;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 560px) {
+        border-radius: 0px;
+    }
 }
 
 .user-circle {
@@ -45,4 +53,28 @@
     font-weight: bold;
     border-radius: 24px;
     padding: 0 2rem;
+    cursor: default;
+}
+
+.mat-mdc-tab-group,
+.mat-mdc-tab-nav-bar {
+    --mdc-tab-indicator-active-indicator-color: #ffffff;
+    --mat-tab-header-disabled-ripple-color: rgba(255, 255, 255, 0.54);
+    --mat-tab-header-pagination-icon-color: #000;
+    --mat-tab-header-inactive-label-text-color: rgba(255, 255, 255, 0.54);
+    --mat-tab-header-active-label-text-color: #ffffff;
+    --mat-tab-header-active-ripple-color: #ffffff;
+    --mat-tab-header-inactive-ripple-color: #ffffff;
+    --mat-tab-header-inactive-focus-label-text-color: rgba(255, 255, 255, 0.54);
+    --mat-tab-header-inactive-hover-label-text-color: rgba(255, 255, 255, 0.54);
+    --mat-tab-header-active-focus-label-text-color: #ffffff;
+    --mat-tab-header-active-hover-label-text-color: #ffffff;
+    --mat-tab-header-active-focus-indicator-color: #ffffff;
+    --mat-tab-header-active-hover-indicator-color: #ffffff;
+}
+
+.tabs-wrapper {
+    width: 100%;
+    max-width: 560px;
+    padding: 20px 0px;
 }
