@@ -17,7 +17,7 @@
     </mat-toolbar>
 
     <div class="tabs-wrapper">
-        <mat-tab-group mat-stretch-tabs mat-align-tabs="center">
+        <mat-tab-group mat-stretch-tabs mat-align-tabs="center" dynamicHeight>
             <mat-tab label="QUOTES">
                 <mat-card class="table-card">
                     <mat-card-header>
@@ -35,8 +35,23 @@
             </mat-tab>
 
 
-            <mat-tab label="CLIENTS"> Content 2 </mat-tab>
-            <mat-tab label="JOBS"> Content 3 </mat-tab>
+            <mat-tab label="CLIENTS">
+                <mat-card class="table-card">
+                    <mat-card-header>
+                        <mat-card-title>Clients</mat-card-title>
+                    </mat-card-header>
+                    <app-pending-table></app-pending-table>
+                </mat-card>
+
+            </mat-tab>
+            <mat-tab label="JOBS">
+                <mat-card class="table-card">
+                    <mat-card-header>
+                        <mat-card-title>Jobs</mat-card-title>
+                    </mat-card-header>
+                    <app-pending-table></app-pending-table>
+                </mat-card>
+            </mat-tab>
         </mat-tab-group>
     </div>
 
