@@ -7,6 +7,8 @@ import { TaglineComponent } from './home/tagline/tagline.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
 import { PendingTableComponent } from './portal/pending-table/pending-table.component';
 import { HistoryTableComponent } from './portal/history-table/history-table.component';
+import { JobTableComponent } from './portal/job-table/job-table.component';
+import { ClientTableComponent } from './portal/client-table/client-table.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
@@ -47,6 +49,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     CarouselComponent,
     PendingTableComponent,
     HistoryTableComponent,
+    JobTableComponent,
+    ClientTableComponent,
     MatTabsModule,
     MatTableModule,
     MatToolbarModule,
