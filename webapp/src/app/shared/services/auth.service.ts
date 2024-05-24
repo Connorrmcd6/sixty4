@@ -44,20 +44,24 @@ export class AuthService {
 
 
   // Sign in with email/password
-  SignIn(email: string, password: string) {
-    return this.afAuth
-      .signInWithEmailAndPassword(email, password)
-      .then((result) => {
-        this.SetUserData(result.user);
-        this.afAuth.authState.subscribe((user) => {
-          if (user) {
-            this.router.navigate(['portal']);
-          }
+  SignIn(email: string, password: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      this.afAuth
+        .signInWithEmailAndPassword(email, password)
+        .then((result) => {
+          this.SetUserData(result.user);
+          this.afAuth.authState.subscribe((user) => {
+            if (user) {
+              this.router.navigate(['portal']);
+            }
+            resolve();
+          });
+        })
+        .catch((error) => {
+          window.alert(error.message);
+          reject(error);
         });
-      })
-      .catch((error) => {
-        window.alert(error.message);
-      });
+    });
   }
 
 
