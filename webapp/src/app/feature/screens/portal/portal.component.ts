@@ -8,8 +8,17 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 })
 export class PortalComponent implements OnInit {
 
+  getUserInitials(): string {
+    const userInfo = localStorage.getItem('userInfo');
+    if (userInfo) {
+      const { userName, userSurname } = JSON.parse(userInfo);
+      this.userInitials = `${userName[0]}${userSurname[0]}`;
+    }
+    return this.userInitials;
+  }
+
   companyName: string = "Sixty4"
-  userInitials: string = "BR"
+  userInitials: string = this.getUserInitials();
   notifications: Array<any> = ["Connor has requested a review", "Ryan approved QUO00102"]; // add notifications here
 
   constructor(public authService: AuthService) { }
