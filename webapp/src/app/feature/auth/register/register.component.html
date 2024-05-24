@@ -1,53 +1,83 @@
 <div class="register-container">
-    <div class="register-card-content">
-      <mat-card>
-        <!-- Back button row -->
-        <div class="back-button-row">
-          <nav>
-            <button  mat-icon-button colour="primary" (click)="goBack()">
-              <mat-icon>arrow_back</mat-icon>
-            </button>
-          </nav>
+  <div class="register-card-content">
+    <mat-card>
+      <!-- Back button row -->
+      <div class="back-button-row">
+        <nav>
+          <button mat-icon-button colour="primary" (click)="goBack()">
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+        </nav>
+      </div>
+      <!-- Logo and welcome container -->
+      <div class="logo-welcome-container">
+        <div class="logo-container">
+          <img src="../../../../assets/logo-black.svg" alt="Logo">
         </div>
-        <!-- Logo and welcome container -->
-        <div class="logo-welcome-container">
-            <div class="logo-container">
-                <img src="../../../../assets/logo-black.svg" alt="Logo">
-            </div>
-        </div>
-        <mat-card-content>
-          <!-- Email input field -->
-          <mat-form-field appearance="outline">
-              <mat-label>Email</mat-label>
-              <input matInput placeholder="Email" type="text" #userEmailReg required>
-              <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
-          </mat-form-field>
-          <!-- Password input field -->
-          <mat-form-field color="primary" appearance="outline">
-            <mat-label>Password</mat-label>
-            <input matInput [type]="hide1 ? 'password' : 'text'" #userPasswordReg required>
-            <button color="primary" mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
-              <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </button>
-          </mat-form-field>
-          <!-- Confirm Password input field -->
-          <mat-form-field color="primary" appearance="outline">
-            <mat-label>Confirm Password</mat-label>
-            <input matInput [type]="hide2 ? 'password' : 'text'" #userPasswordConfirm required>
-            <button color="primary" mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide2" >
-              <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </button>
-          </mat-form-field>
-          <!-- Sign Up button -->
-          <div class="button-row">
-            <button mat-raised-button color="primary" (click)="authService.SignUp(userEmailReg.value, userPasswordReg.value)">Sign Up</button>
+      </div>
+      <mat-card-content>
+        <!-- Email input field -->
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" type="text" #userEmailReg required>
+          <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+        </mat-form-field>
+
+        <!-- Name input field -->
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Email" type="text" #userEmailReg required>
+          <mat-icon color="primary" matSuffix>face</mat-icon>
+        </mat-form-field>
+
+
+        <!-- Surname input field -->
+        <mat-form-field appearance="outline">
+          <mat-label>Surname</mat-label>
+          <input matInput placeholder="Email" type="text" #userEmailReg required>
+          <mat-icon color="primary" matSuffix>face</mat-icon>
+        </mat-form-field>
+
+
+        <!-- Role input field -->
+        <mat-form-field appearance="outline">
+          <mat-label>Roles</mat-label>
+          <mat-select [formControl]="roles" multiple #userEmailReg required>
+            <mat-option value="1">Sales</mat-option>
+            <mat-option value="2">Admin</mat-option>
+          </mat-select>
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+
+        <!-- Password input field -->
+        <mat-form-field color="primary" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput [type]="hide1 ? 'password' : 'text'" #userPasswordReg required>
+          <button color="primary" mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide1">
+            <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <!-- Confirm Password input field -->
+        <mat-form-field color="primary" appearance="outline">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput [type]="hide2 ? 'password' : 'text'" #userPasswordConfirm required>
+          <button color="primary" mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide2">
+            <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <!-- Sign Up button -->
+        <div class="button-row">
+          <button mat-raised-button color="primary"
+            (click)="authService.SignUp(userEmailReg.value, userPasswordReg.value)">Sign Up</button>
         </div>
       </mat-card-content>
-    <!-- Bottom content -->
-    <div class="bottom-content">
-      <span class="login-message">Have an account?</span>
-      <button mat-button color="primary" routerLink="/login">Login</button>
+      <!-- Bottom content -->
+      <div class="bottom-content">
+        <span class="login-message">Have an account?</span>
+        <button mat-button color="primary" routerLink="/login">Login</button>
+      </div>
+    </mat-card>
   </div>
-      </mat-card>
-    </div>
-  </div>
+</div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     private location: Location,
     private formBuilder: FormBuilder,
     public authService: AuthService
-  ) {}
+  ) { }
 
   // Go back to the previous page
   goBack(): void {
@@ -41,6 +41,8 @@ export class RegisterComponent implements OnInit {
   });
 
   isLinear = false;
+
+  roles = new FormControl();
 
   ngOnInit() {
     // Initialization logic goes here
