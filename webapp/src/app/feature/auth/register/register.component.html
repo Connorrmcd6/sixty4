@@ -23,21 +23,25 @@
             <!-- Email input field -->
             <mat-form-field appearance="outline" color="primary">
               <mat-label>Email</mat-label>
-              <input matInput placeholder="Email" type="text" #userEmailReg required>
+              <input matInput type="text" #userEmailReg required>
               <mat-icon matSuffix>mail_outline</mat-icon>
             </mat-form-field>
             <!-- Name input field -->
             <mat-form-field appearance="outline" color="primary">
               <mat-label>Name</mat-label>
-              <input matInput placeholder="Name" type="text" #userNameReg required>
+              <input matInput type="text" #userNameReg required>
               <mat-icon matSuffix>face</mat-icon>
             </mat-form-field>
             <!-- Surname input field -->
             <mat-form-field appearance="outline" color="primary">
               <mat-label>Surname</mat-label>
-              <input matInput placeholder="Surname" type="text" #userSurnameReg required>
+              <input matInput type="text" #userSurnameReg required>
               <mat-icon matSuffix>face</mat-icon>
             </mat-form-field>
+
+            <div class="button-row">
+              <button mat-button matStepperNext>Next</button>
+            </div>
           </mat-step>
           <mat-step [stepControl]="secondFormGroup" label="Password" state="settings">
             <!-- Role input field -->
@@ -67,6 +71,13 @@
                 <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button>
             </mat-form-field>
+
+
+            <div class="button-row">
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-raised-button color="primary"
+                (click)="authService.SignUp(userEmailReg.value, userPasswordReg.value)">Sign Up</button>
+            </div>
           </mat-step>
           <!-- Icon overrides. -->
           <ng-template matStepperIcon="settings">
@@ -75,14 +86,11 @@
           <ng-template matStepperIcon="personal">
             <mat-icon>person_outline</mat-icon>
           </ng-template>
+
+
+
+
         </mat-stepper>
-
-
-        <!-- Sign Up button -->
-        <div class="button-row">
-          <button mat-raised-button color="primary"
-            (click)="authService.SignUp(userEmailReg.value, userPasswordReg.value)">Sign Up</button>
-        </div>
       </mat-card-content>
       <!-- Bottom content -->
       <div class="bottom-content">
