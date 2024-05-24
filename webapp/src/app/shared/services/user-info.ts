@@ -1,6 +1,6 @@
 export interface UserInfo {
     uid: string;
     userName: undefined | string
-    userRole: undefined | number;
-
+    userSurname: undefined | string
+    userRole: undefined | number[];
 }

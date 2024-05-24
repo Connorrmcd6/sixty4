@@ -60,7 +60,7 @@ export class AuthService {
       });
   }
   // Sign up with email/password
-  SignUp(email: string, password: string) {
+  SignUp(email: string, password: string, userName: string, userSurname: string, userRole: number[]) {
     return this.afAuth
       .createUserWithEmailAndPassword(email, password)
       .then((result) => {
@@ -69,7 +69,7 @@ export class AuthService {
         console.log('setting user data');
         this.SetUserData(result.user);
         console.log('setting user info data');
-        this.SetUserInfoData(result.user);
+        this.SetUserInfoData(result.user, userName, userSurname, userRole);
         if (result != null) {
           console.log('user id', result.user?.uid);
         }
@@ -124,12 +124,13 @@ export class AuthService {
   }
 
   //create user info record linked to auth uid
-  SetUserInfoData(user: any) {
+  SetUserInfoData(user: any, userName: string, userSurname: string, userRole: number[]) {
     const userInfoRef: AngularFirestoreDocument<UserInfo> = this.afs.doc(`user-info/${user.uid}`);
     const userInfoData: UserInfo = {
       uid: user.uid,
-      userName: undefined,
-      userRole: undefined,
+      userName: userName,
+      userSurname: userSurname,
+      userRole: userRole,
     };
     return userInfoRef.set(userInfoData, { merge: true });
   }
