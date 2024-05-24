@@ -42,7 +42,16 @@ export class RegisterComponent implements OnInit {
 
   isLinear = false;
 
+
   ngOnInit() {
     // Initialization logic goes here
+  }
+
+  isLoading = false;
+
+  signUp(email: string, password: string, name: string, surname: string, role: number[]) {
+    this.isLoading = true;
+    this.authService.SignUp(email, password, name, surname, role)
+      .finally(() => this.isLoading = false);
   }
 }

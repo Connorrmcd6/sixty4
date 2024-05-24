@@ -10,7 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 import { LoginComponent } from './login/login.component';
@@ -39,7 +39,8 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     LoginComponent,

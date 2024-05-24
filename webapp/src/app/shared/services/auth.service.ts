@@ -59,24 +59,30 @@ export class AuthService {
         window.alert(error.message);
       });
   }
+
+
   // Sign up with email/password
-  SignUp(email: string, password: string, userName: string, userSurname: string, userRole: number[]) {
-    return this.afAuth
-      .createUserWithEmailAndPassword(email, password)
-      .then((result) => {
-        console.log('sending verification email');
-        this.SendVerificationMail();
-        console.log('setting user data');
-        this.SetUserData(result.user);
-        console.log('setting user info data');
-        this.SetUserInfoData(result.user, userName, userSurname, userRole);
-        if (result != null) {
-          console.log('user id', result.user?.uid);
-        }
-      })
-      .catch((error) => {
-        window.alert(error.message);
-      });
+  SignUp(email: string, password: string, userName: string, userSurname: string, userRole: number[]): Promise<void> {
+    return new Promise((resolve, reject) => {
+      this.afAuth
+        .createUserWithEmailAndPassword(email, password)
+        .then((result) => {
+          console.log('sending verification email');
+          this.SendVerificationMail();
+          console.log('setting user data');
+          this.SetUserData(result.user);
+          console.log('setting user info data');
+          this.SetUserInfoData(result.user, userName, userSurname, userRole);
+          if (result != null) {
+            console.log('user id', result.user?.uid);
+          }
+          resolve();
+        })
+        .catch((error) => {
+          window.alert(error.message);
+          reject(error);
+        });
+    });
   }
 
 

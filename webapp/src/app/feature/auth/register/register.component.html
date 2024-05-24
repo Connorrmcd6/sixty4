@@ -76,8 +76,10 @@
             <div class="button-row">
               <button mat-button matStepperPrevious>Back</button>
               <button mat-raised-button color="primary"
-                (click)="authService.SignUp(userEmailReg.value, userPasswordReg.value, userNameReg.value, userSurnameReg.value, userRoleReg.value)">Sign
-                Up</button>
+                (click)="isLoading = true; signUp(userEmailReg.value, userPasswordReg.value, userNameReg.value, userSurnameReg.value, userRoleReg.value)">
+                <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
+                Sign Up
+              </button>
             </div>
           </mat-step>
           <!-- Icon overrides. -->
