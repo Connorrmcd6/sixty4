@@ -8,57 +8,53 @@
     min-height: 95vh;
     background-color: #333333;
 
+    @media (max-width: 560px) {
+        padding-top: 0;
+        min-height: 100vh;
+    }
 }
 
-.user-info {
-    border: 1px solid white;
-    border-radius: 16px;
-    background-color: transparent;
-    color: white;
-    padding: 20px;
-    width: 50%;
+
+.sales-toolbar {
+    width: 100%;
+    max-width: 560px;
+    border-radius: 8px;
     justify-content: space-between;
     align-items: center;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 5vh;
-    /* Change this to 'column' if you want the items to be stacked vertically */
-}
 
-.user-field {
-    text-align: left;
-}
-
-.button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 20px;
-
-    .mat-mdc-raised-button.mat-unthemed {
-        --mdc-protected-button-container-color: #FF4C46;
-        --mdc-protected-button-label-text-color: #fff;
-        border-radius: 16px;
+    @media (max-width: 560px) {
+        border-radius: 0px;
     }
-
 }
 
-.tabs-wrapper {
-    width: 50%;
+.user-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff; // adjust the color as needed
+    color: #fff; // adjust the color as needed
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
-mat-card {
-    margin-top: 20px;
-}
-
-.signout-button {
-    background-color: #CECDD3;
-    color: #333333;
-    border-radius: 16px;
+.right-aligned-items {
+    display: flex;
+    align-items: center;
 }
 
 
+.company-chip {
+    background-color: rgba(51, 51, 51, 0.80);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 24px;
+    padding: 0 2rem;
+    cursor: default;
+}
 
 .mat-mdc-tab-group,
 .mat-mdc-tab-nav-bar {
@@ -75,4 +71,23 @@ mat-card {
     --mat-tab-header-active-hover-label-text-color: #ffffff;
     --mat-tab-header-active-focus-indicator-color: #ffffff;
     --mat-tab-header-active-hover-indicator-color: #ffffff;
+}
+
+.tabs-wrapper {
+    width: 100%;
+    max-width: 560px;
+    padding: 20px 0px;
+}
+
+
+
+.table-card {
+    margin: 20px 0px;
+    border-radius: 8px;
+    padding-bottom: 10px;
+
+
+    @media (max-width: 560px) {
+        margin: 20px 10px;
+    }
 }

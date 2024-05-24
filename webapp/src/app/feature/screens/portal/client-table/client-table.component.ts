@@ -4,6 +4,8 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+
 
 export interface UserData {
   id: string;
@@ -45,18 +47,16 @@ const NAMES: string[] = [
   'Elizabeth',
 ];
 
-/**
- * @title Data table with sorting, pagination, and filtering.
- */
+
 @Component({
-  selector: 'app-table',
-  styleUrl: 'table.component.scss',
-  templateUrl: 'table.component.html',
+  selector: 'app-client-table',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule],
+  imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule],
+  templateUrl: './client-table.component.html',
+  styleUrl: './client-table.component.scss'
 })
-export class TableComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
+export class ClientTableComponent {
+  displayedColumns: string[] = ['name', 'id', 'progress', 'fruit'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

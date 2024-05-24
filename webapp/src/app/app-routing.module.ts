@@ -26,6 +26,7 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'portal', component: PortalComponent, canActivate: [AuthGuard] },
+  // { path: 'portal', component: PortalComponent },
   { path: 'design', component: DesignComponent },
   { path: 'packaging', component: PackagingComponent },
   { path: 'pricing', component: PricingComponent },

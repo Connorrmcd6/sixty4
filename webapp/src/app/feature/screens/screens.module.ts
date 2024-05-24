@@ -5,7 +5,10 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { TaglineComponent } from './home/tagline/tagline.component';
 import { CarouselComponent } from './home/carousel/carousel.component';
-import { TableComponent } from './portal/table/table.component';
+import { PendingTableComponent } from './portal/pending-table/pending-table.component';
+import { HistoryTableComponent } from './portal/history-table/history-table.component';
+import { JobTableComponent } from './portal/job-table/job-table.component';
+import { ClientTableComponent } from './portal/client-table/client-table.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
@@ -18,6 +21,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { PortalComponent } from './portal/portal.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
 
 
 @NgModule({
@@ -40,9 +47,16 @@ import { MatTableModule } from '@angular/material/table';
     MatInputModule,
     MatRadioModule,
     CarouselComponent,
-    TableComponent,
+    PendingTableComponent,
+    HistoryTableComponent,
+    JobTableComponent,
+    ClientTableComponent,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatToolbarModule,
+    MatChipsModule,
+    MatMenuModule,
+    MatBadgeModule
   ]
 })
 export class ScreensModule { }

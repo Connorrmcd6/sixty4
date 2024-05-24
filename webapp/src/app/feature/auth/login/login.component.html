@@ -28,7 +28,9 @@
                 </mat-form-field>
                 <div class="button-row">
                     <button mat-raised-button type="submit"
-                        (click)="authService.SignIn(userEmail.value, userPassword.value)">Login</button>
+                        (click)="isLoading = true; signIn(userEmail.value, userPassword.value)">
+                        <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
+                        Login</button>
                 </div>
             </mat-card-content>
             <div class="bottom-content">

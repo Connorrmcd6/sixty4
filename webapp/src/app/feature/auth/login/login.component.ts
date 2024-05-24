@@ -8,17 +8,25 @@ import { AuthService } from "src/app/shared/services/auth.service";
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
   hide = true;
-constructor(
-  private location: Location,
-  public authService: AuthService
+  constructor(
+    private location: Location,
+    public authService: AuthService
 
-){}
-goBack(): void{
-  this.location.back();
-}
-ngOnInit(): void {
-  
-}
+  ) { }
+  goBack(): void {
+    this.location.back();
+  }
+  ngOnInit(): void {
+
+  }
+
+  isLoading = false;
+
+  signIn(email: string, password: string) {
+    this.isLoading = true;
+    this.authService.SignIn(email, password)
+      .finally(() => this.isLoading = false);
+  }
 }
