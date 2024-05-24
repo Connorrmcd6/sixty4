@@ -16,57 +16,68 @@
         </div>
       </div>
       <mat-card-content>
-        <!-- Email input field -->
-        <mat-form-field appearance="outline">
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="Email" type="text" #userEmailReg required>
-          <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
-        </mat-form-field>
-
-        <!-- Name input field -->
-        <mat-form-field appearance="outline">
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Email" type="text" #userEmailReg required>
-          <mat-icon color="primary" matSuffix>face</mat-icon>
-        </mat-form-field>
 
 
-        <!-- Surname input field -->
-        <mat-form-field appearance="outline">
-          <mat-label>Surname</mat-label>
-          <input matInput placeholder="Email" type="text" #userEmailReg required>
-          <mat-icon color="primary" matSuffix>face</mat-icon>
-        </mat-form-field>
+        <mat-stepper [linear]="isLinear" #stepper>
+          <mat-step [stepControl]="firstFormGroup" label="Details" state="personal">
+            <!-- Email input field -->
+            <mat-form-field appearance="outline" color="primary">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" type="text" #userEmailReg required>
+              <mat-icon matSuffix>mail_outline</mat-icon>
+            </mat-form-field>
+            <!-- Name input field -->
+            <mat-form-field appearance="outline" color="primary">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Name" type="text" #userNameReg required>
+              <mat-icon matSuffix>face</mat-icon>
+            </mat-form-field>
+            <!-- Surname input field -->
+            <mat-form-field appearance="outline" color="primary">
+              <mat-label>Surname</mat-label>
+              <input matInput placeholder="Surname" type="text" #userSurnameReg required>
+              <mat-icon matSuffix>face</mat-icon>
+            </mat-form-field>
+          </mat-step>
+          <mat-step [stepControl]="secondFormGroup" label="Password" state="settings">
+            <!-- Role input field -->
+            <mat-form-field appearance="outline" color="primary">
+              <mat-label>Roles</mat-label>
+              <mat-select multiple #userRoleReg required>
+                <mat-option value="1">Sales</mat-option>
+                <mat-option value="2">Admin</mat-option>
+              </mat-select>
+              <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+            <!-- Password input field -->
+            <mat-form-field appearance="outline" color="primary">
+              <mat-label>Password</mat-label>
+              <input matInput [type]="hide1 ? 'password' : 'text'" #userPasswordReg required>
+              <button mat-icon-button matSuffix (click)="hide1 = !hide1"
+                [attr.aria-label]="hide1 ? 'Show password' : 'Hide password'" [attr.aria-pressed]="hide1">
+                <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+            <!-- Confirm Password input field -->
+            <mat-form-field appearance="outline" color="primary">
+              <mat-label>Confirm Password</mat-label>
+              <input matInput [type]="hide2 ? 'password' : 'text'" #userPasswordConfirm required>
+              <button mat-icon-button matSuffix (click)="hide2 = !hide2"
+                [attr.aria-label]="hide2 ? 'Show password' : 'Hide password'" [attr.aria-pressed]="hide2">
+                <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </mat-step>
+          <!-- Icon overrides. -->
+          <ng-template matStepperIcon="settings">
+            <mat-icon>settings</mat-icon>
+          </ng-template>
+          <ng-template matStepperIcon="personal">
+            <mat-icon>person_outline</mat-icon>
+          </ng-template>
+        </mat-stepper>
 
 
-        <!-- Role input field -->
-        <mat-form-field appearance="outline">
-          <mat-label>Roles</mat-label>
-          <mat-select [formControl]="roles" multiple #userEmailReg required>
-            <mat-option value="1">Sales</mat-option>
-            <mat-option value="2">Admin</mat-option>
-          </mat-select>
-          <mat-icon matSuffix>person</mat-icon>
-        </mat-form-field>
-
-        <!-- Password input field -->
-        <mat-form-field color="primary" appearance="outline">
-          <mat-label>Password</mat-label>
-          <input matInput [type]="hide1 ? 'password' : 'text'" #userPasswordReg required>
-          <button color="primary" mat-icon-button matSuffix (click)="hide1 = !hide1" [attr.aria-label]="'Hide password'"
-            [attr.aria-pressed]="hide1">
-            <mat-icon>{{hide1 ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-        </mat-form-field>
-        <!-- Confirm Password input field -->
-        <mat-form-field color="primary" appearance="outline">
-          <mat-label>Confirm Password</mat-label>
-          <input matInput [type]="hide2 ? 'password' : 'text'" #userPasswordConfirm required>
-          <button color="primary" mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'"
-            [attr.aria-pressed]="hide2">
-            <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-        </mat-form-field>
         <!-- Sign Up button -->
         <div class="button-row">
           <button mat-raised-button color="primary"

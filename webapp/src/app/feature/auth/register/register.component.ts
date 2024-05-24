@@ -42,8 +42,6 @@ export class RegisterComponent implements OnInit {
 
   isLinear = false;
 
-  roles = new FormControl();
-
   ngOnInit() {
     // Initialization logic goes here
   }

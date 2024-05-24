@@ -1,95 +1,86 @@
 .register-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #333333;
-  }
-  
-  .register-card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 30px;
-  }
-  
-  mat-card {
-    width: 300px;
-    padding: 10px 10px 20px 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  mat-card-actions {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  mat-card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .logo-container {
-    text-align: center;
-    margin-bottom: 0px;
-  }
-  
-  .logo-container img {
-    max-width: 150px;
-    height: auto;
-  }
-  
-  .welcome {
-    color: #063684;
-    font-family: "Londrina-Solid", Roboto, Noto, sans-serif;
-  }
-  
-  .extension {
-    color: #f00aca;
-    font-family: "Londrina-Solid", Roboto, Noto, sans-serif;
-  }
-  
-  .logo-welcome-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .bottom-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .login-message {
-    margin-right: 5px;
-    font-size: 1em;
-  }
-  
-  .button-row {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    gap: 10px;
-    padding-bottom: 4px;
-  }
-  
-  .mat-mdc-card {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .back-button-row {
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-  }
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #333333;
+}
+
+.register-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 30px;
+}
+
+mat-card {
+  width: 300px;
+  padding: 10px 10px 20px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.logo-container img {
+  max-width: 150px;
+  height: auto;
+}
+
+.logo-welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.login-message {
+  margin-right: 5px;
+  font-size: 1em;
+}
+
+.button-row {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 48px;
+  padding-bottom: 4px;
+}
+
+.mat-mdc-card {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-button-row {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
