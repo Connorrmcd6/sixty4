@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 import { ClientComponent } from './client/client.component';
@@ -28,6 +29,7 @@ import { QuoteComponent } from './quote/quote.component';
     MatButtonModule,
     MatExpansionModule,
     MatDialogModule,
+    MatStepperModule
   ]
 })
 export class DialogsModule { }
