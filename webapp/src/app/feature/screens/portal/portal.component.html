@@ -81,9 +81,9 @@
 
 
 <mat-menu #newMenu="matMenu">
-    <button mat-menu-item>Quote</button>
-    <button mat-menu-item>Client</button>
-    <button mat-menu-item>Job Card</button>
+    <button mat-menu-item (click)="openQuoteDialog()">Quote</button>
+    <button mat-menu-item (click)="openClientDialog()">Client</button>
+    <button mat-menu-item (click)="openJobDialog()">Job Card</button>
 </mat-menu>
 
 <mat-menu #notificaitons="matMenu">
