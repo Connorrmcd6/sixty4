@@ -7,6 +7,10 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrl: './portal.component.scss'
 })
 export class PortalComponent implements OnInit {
+  constructor(
+    public authService: AuthService,
+  ) { }
+
 
   getUserInitials(): string {
     const userInfo = localStorage.getItem('userInfo');
@@ -21,7 +25,7 @@ export class PortalComponent implements OnInit {
   userInitials: string = this.getUserInitials();
   notifications: Array<any> = ["Connor has requested a review", "Ryan approved QUO00102"]; // add notifications here
 
-  constructor(public authService: AuthService) { }
+
   ngOnInit(): void { }
 }
 
