@@ -32,6 +32,13 @@
                     </mat-card-header>
                     <app-history-table></app-history-table>
                 </mat-card>
+                <mat-card-actions>
+                    <div class="button-row">
+                        <button class="action-button" mat-raised-button color="warn">
+                            <mat-icon color="accent">add</mat-icon>New Quote
+                        </button>
+                    </div>
+                </mat-card-actions>
             </mat-tab>
 
 
@@ -42,6 +49,13 @@
                     </mat-card-header>
                     <app-client-table></app-client-table>
                 </mat-card>
+                <mat-card-actions>
+                    <div class="button-row">
+                        <button class="action-button" mat-raised-button color="warn">
+                            <mat-icon color="accent">add</mat-icon>New Client
+                        </button>
+                    </div>
+                </mat-card-actions>
 
             </mat-tab>
             <mat-tab label="JOBS">
@@ -50,7 +64,15 @@
                         <mat-card-title>Jobs</mat-card-title>
                     </mat-card-header>
                     <app-job-table></app-job-table>
+
                 </mat-card>
+                <mat-card-actions>
+                    <div class="button-row">
+                        <button class="action-button" mat-raised-button color="warn">
+                            <mat-icon color="accent">add</mat-icon>New Job
+                        </button>
+                    </div>
+                </mat-card-actions>
             </mat-tab>
         </mat-tab-group>
     </div>
