@@ -5,13 +5,13 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 export interface UserData {
   id: string;
   name: string;
-  progress: string;
-  fruit: string;
+  details: number;
 }
 
 /** Constants used to fill up our data base. */
@@ -52,10 +52,10 @@ const NAMES: string[] = [
   standalone: true,
   templateUrl: './pending-table.component.html',
   styleUrl: './pending-table.component.scss',
-  imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule],
+  imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule, MatButtonModule],
 })
 export class PendingTableComponent {
-  displayedColumns: string[] = ['name', 'id', 'progress', 'fruit'];
+  displayedColumns: string[] = ['q_number', 'client', 'details'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -82,6 +82,11 @@ export class PendingTableComponent {
       this.dataSource.paginator.firstPage();
     }
   }
+
+  displayAlert(details: string): void {
+    alert(details);
+  }
+
 }
 
 /** Builds and returns a new User. */
@@ -95,7 +100,6 @@ function createNewUser(id: number): UserData {
   return {
     id: id.toString(),
     name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+    details: id,
   };
 }
