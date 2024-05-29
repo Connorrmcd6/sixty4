@@ -84,7 +84,8 @@ export class PendingTableComponent {
   }
 
   displayAlert(details: string): void {
-    alert(details);
+    const msg = "this will show the quote for QUO00" + details;
+    alert(msg);
   }
 
 }

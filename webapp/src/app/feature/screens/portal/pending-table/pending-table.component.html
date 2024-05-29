@@ -25,10 +25,10 @@
 
         <!-- Details Column -->
         <ng-container matColumnDef="details">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Details </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
             <td mat-cell *matCellDef="let row">
-                <button mat-icon-button (click)="displayAlert(row.details)">
-                    <mat-icon>launch</mat-icon>
+                <button class="action-button" mat-flat-button (click)="displayAlert(row.details)">
+                    <mat-icon color="primary">zoom_in</mat-icon>View
                 </button>
             </td>
         </ng-container>
