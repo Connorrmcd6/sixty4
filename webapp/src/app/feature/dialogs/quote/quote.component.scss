@@ -16,3 +16,9 @@
 .top-row {
     display: flex;
 }
+
+.stepper {
+    max-height: 90vh;
+    /* adjust this value as needed */
+    overflow-y: auto;
+}
