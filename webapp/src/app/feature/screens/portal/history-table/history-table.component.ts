@@ -5,13 +5,13 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 
 export interface UserData {
   id: string;
   name: string;
-  progress: string;
-  fruit: string;
+  details: number;
 }
 
 /** Constants used to fill up our data base. */
@@ -51,12 +51,12 @@ const NAMES: string[] = [
 @Component({
   selector: 'app-history-table',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule],
+  imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule, MatButtonModule],
   templateUrl: './history-table.component.html',
   styleUrl: './history-table.component.scss'
 })
 export class HistoryTableComponent {
-  displayedColumns: string[] = ['name', 'id', 'progress', 'fruit'];
+  displayedColumns: string[] = ['q_number', 'client', 'details'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -64,7 +64,7 @@ export class HistoryTableComponent {
 
   constructor() {
     // Create 100 users
-    const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
+    const users = Array.from({ length: 13 }, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
@@ -83,6 +83,14 @@ export class HistoryTableComponent {
       this.dataSource.paginator.firstPage();
     }
   }
+
+
+  displayAlert(details: string): void {
+    const msg = "this will show the quote for QUO00" + details;
+    alert(msg);
+  }
+
+
 }
 
 /** Builds and returns a new User. */
@@ -96,7 +104,6 @@ function createNewUser(id: number): UserData {
   return {
     id: id.toString(),
     name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+    details: id,
   };
 }

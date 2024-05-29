@@ -34,7 +34,7 @@
                 </mat-card>
                 <mat-card-actions>
                     <div class="button-row">
-                        <button class="action-button" mat-raised-button color="warn">
+                        <button class="action-button" mat-raised-button color="warn" (click)="openQuoteDialog()">
                             <mat-icon color="accent">add</mat-icon>New Quote
                         </button>
                     </div>
@@ -51,7 +51,7 @@
                 </mat-card>
                 <mat-card-actions>
                     <div class="button-row">
-                        <button class="action-button" mat-raised-button color="warn">
+                        <button class="action-button" mat-raised-button color="warn" (click)="openClientDialog()">
                             <mat-icon color="accent">add</mat-icon>New Client
                         </button>
                     </div>
@@ -68,7 +68,7 @@
                 </mat-card>
                 <mat-card-actions>
                     <div class="button-row">
-                        <button class="action-button" mat-raised-button color="warn">
+                        <button class="action-button" mat-raised-button color="warn" (click)="openJobDialog()">
                             <mat-icon color="accent">add</mat-icon>New Job
                         </button>
                     </div>
@@ -81,9 +81,9 @@
 
 
 <mat-menu #newMenu="matMenu">
-    <button mat-menu-item>Quote</button>
-    <button mat-menu-item>Client</button>
-    <button mat-menu-item>Job Card</button>
+    <button mat-menu-item (click)="openQuoteDialog()">Quote</button>
+    <button mat-menu-item (click)="openClientDialog()">Client</button>
+    <button mat-menu-item (click)="openJobDialog()">Job Card</button>
 </mat-menu>
 
 <mat-menu #notificaitons="matMenu">

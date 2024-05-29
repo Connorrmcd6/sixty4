@@ -1,0 +1,136 @@
+<div class="top-row">
+    <button mat-icon-button (click)="closeDialog()">
+        <mat-icon matSuffix>close</mat-icon>
+    </button>
+</div>
+<div class="stepper">
+    <mat-stepper #stepper>
+        <mat-step>
+            <form class="form-content">
+                <ng-template matStepLabel>Client</ng-template>
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Client </mat-label>
+                    <input matInput placeholder="Email" type="text" #client required>
+                    <mat-icon color="primary" matSuffix>business_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Rep Name </mat-label>
+                    <input matInput placeholder="Email" type="text" #rep required>
+                    <mat-icon color="primary" matSuffix>person_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Email </mat-label>
+                    <input matInput placeholder="Email" type="text" #clientEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Mark up </mat-label>
+                    <input matInput placeholder="Email" type="text" #markup required>
+                    <mat-icon color="primary" matSuffix>smartphone</mat-icon>
+                </mat-form-field>
+                <div class="button-row">
+                    <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step label="Fill out your address">
+            <ng-template matStepLabel>Order</ng-template>
+            <form class="form-content">
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Quantity </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Colours </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Paper Type </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Finish </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+
+                <div class="button-row">
+                    <button mat-flat-button matStepperPrevious>Back</button>
+                    <button mat-raised-button color="primary" matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Job</ng-template>
+            <form class="form-content">
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Leading Edge </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Trailing Edge </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Labels Accross </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Labels P/Roll </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Cutting </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Winding </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Print Time </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" required>
+                    <mat-label> Over Print </mat-label>
+                    <input matInput placeholder="Email" type="text" #userEmail required>
+                    <mat-icon color="primary" matSuffix>mail_outline</mat-icon>
+                </mat-form-field>
+
+
+                <div class="button-row">
+                    <button mat-flat-button matStepperPrevious>Back</button>
+                    <button mat-raised-button color="warn" matStepperNext>Submit</button>
+                </div>
+            </form>
+        </mat-step>
+    </mat-stepper>
+
+</div>
