@@ -106,6 +106,7 @@ mat-card-content {
     max-width: 75%;
 
     @media (max-width: 768px) {
+        padding-top: 50px;
         width: 60%; // This will keep the aspect ratio of the logo
         max-width: 60%;
     }
